@@ -1,0 +1,35 @@
+TextWindow.WriteLine("hediig oruulah ")
+number = TextWindow.Read()
+For p = 1 To number 
+  Ar[p] = TextWindow.Read()
+EndFor
+TextWindow.WriteLine("osohoor hevleh bol 1 , buurahaar hevleh bol 0" )
+u = TextWindow.ReadNumber()
+For i = 0 To number
+  min = i
+  ih = i
+  For j = i To number 
+  If u =1 Then 
+    if Ar[j]  < Ar[min] Then 
+      min = j 
+      
+    EndIf
+  ElseIf u = 0 then
+    if Ar[j] > Ar[ih] Then 
+      ih = j 
+     EndIf
+   EndIf
+ EndFor
+ If u = 1  Then 
+    temp = Ar[i]
+    Ar[i]=Ar[min]
+    Ar[min] = temp
+  ElseIf u = 0 then 
+    temp = Ar[i]
+    Ar[i]=Ar[ih]
+    Ar[ih] = temp
+  Endif
+EndFor
+For l = 0 To number
+  TextWindow.WriteLine(Ar[l])
+EndFor

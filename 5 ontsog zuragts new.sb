@@ -1,0 +1,15 @@
+TextWindow.WriteLine("hemjeenuude ogno uu ")
+x = 100 
+y =  150
+durs[1] = TextWindow.ReadNumber()
+durs[2] = TextWindow.ReadNumber()
+durs[3] = TextWindow.ReadNumber()
+durs[4] = TextWindow.ReadNumber()
+durs[5] = TextWindow.ReadNumber()
+For p = 1 To 5 
+For i = 0 To 4 
+  Turtle.Move(durs[p])
+  Turtle.Turn(72)
+  
+EndFor
+EndFor

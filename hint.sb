@@ -1,0 +1,13 @@
+lives = 3 
+b = 1 
+TextWindow.WriteLine(" moson deer mongon ayga ")
+a = TextWindow.Read()
+While lives > 1 
+  If a <> "sar"  then
+    TextWindow.WriteLine("buruu baina ")
+    TextWindow.WriteLine("shono tod garch irdeg")
+    a = TextWindow.Read()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 y
+  EndIf
+  lives = lives - 1 
+EndWhile
+

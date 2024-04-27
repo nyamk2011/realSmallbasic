@@ -1,0 +1,41 @@
+'ehleed naizuudaa medeeliig oruulna 
+a = 0
+TextWindow.WriteLine("1 r naiziinha neriig oruulnuuu")
+Naiz1 = TextWindow.Read()
+TextWindow.WriteLine(" 1 r naiziinhaa dugaarig oruulnuu")
+duhgaar1 = TextWindow.Read()
+TextWindow.WriteLine("2 r naiziinha neriig oruulnuuu")
+Naiz2 = TextWindow.Read()
+TextWindow.WriteLine(" 2 r naiziinhaa dugaarig oruulnuu")
+duhgaar2 = TextWindow.Read()
+TextWindow.WriteLine("3 r naiziinha neriig oruulnuuu")
+Naiz3 = TextWindow.Read()
+
+TextWindow.WriteLine(" 3 r naiziinhaa dugaarig oruulnuu")
+duhgaar3 = TextWindow.Read()
+TextWindow.WriteLine("4 r naiziinha neriig oruulnuuu")
+Naiz4 = TextWindow.Read()
+
+TextWindow.WriteLine(" 4 r naiziinhaa dugaarig oruulnuu")
+duhgaar4 = TextWindow.Read()
+For j = 1 To 1
+friends[0]["name"] = Naiz1
+friends[0]["phone"] = duhgaar1
+friends[1]["name"] = Naiz2
+friends[1]["phone"] = duhgaar2
+friends[2]["name"] = Naiz3
+friends[2]["phone"] = duhgaar3
+friends[3]["name"] = Naiz4
+friends[3]["phone"] = duhgaar4
+TextWindow.WriteLine("Utasnii dugaariin ni oloh naiziinhaa neriig oruul:")
+searchname = TextWindow.Read()
+For i = 0 To 3 
+  If searchname= friends[i]["name"] Then
+    TextWindow.WriteLine(searchname+ "giin dugaar n "+friends[i]["phone"]) 
+    a = 1
+  EndIf
+EndFor
+EndFor
+If a = 0 Then 
+  TextWindow.WriteLine("ner oldsongu")
+EndIf

@@ -1,0 +1,43 @@
+TextWindow.WriteLine("edgeers 1 iig n songood yavna uu") 
+TextWindow.WriteLine("1 ulaan")
+TextWindow.WriteLine("2 shar")
+TextWindow.WriteLine("3 nogoon")
+TextWindow.WriteLine("4 tsenher")
+ongo = TextWindow.ReadNumber()
+If ongo = 1 Then 
+  ulaan = ongo 
+ElseIf ongo = 2 then 
+  shar = ongo 
+ElseIf ongo = 3 then 
+  nogoon = ongo 
+ElseIf ongo = 4 then 
+  tsenher = ongo 
+EndIf
+TextWindow.WriteLine(" 1 isgelgen")
+TextWindow.WriteLine(" 2 tsiherleg")
+amt = TextWindow.ReadNumber()
+if amt = 1 Then 
+  isgelen = amt 
+ElseIf amt = 2 then
+  tsiherleg = amt 
+EndIf
+If ulaan = tsiherleg Then 
+  TextWindow.WriteLine("tarvas")
+ElseIf shar = tsiherleg then 
+  TextWindow.WriteLine("mandriin")
+elseif nogoon  = tsiherleg then
+  TextWindow.WriteLine(" avoncado ")
+elseif tsenher = tsiherleg then
+  TextWindow.WriteLine("usan uzem ")
+elseif ulaan = isgelen then
+  TextWindow.WriteLine("ulaan alim")
+elseif shar = isgelen then
+  TextWindow.WriteLine("nimbeg ")
+elseif nogoon = isgelen then 
+  TextWindow.WriteLine("kivi ") 
+elseif tsenher = isgelen then 
+  TextWindow.WriteLine("uhriin nud ")
+Else
+  TextWindow.WriteLine("tiim songlt alga")
+EndIf
+  
