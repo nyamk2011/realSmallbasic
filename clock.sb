@@ -15,6 +15,6 @@
    GraphicsWindow.Clear()
    GraphicsWindow.FontSize=40
    GraphicsWindow.DrawText(0,10,Clock.Time)
-   'gert on sar gargaj irne 
+   GraphicsWindow.DrawText(0,50,Clock.Date) 
  EndSub
    
