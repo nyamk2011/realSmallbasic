@@ -1,0 +1,20 @@
+
+ GraphicsWindow.Width = 200
+ GraphicsWindow.Height = 80
+ GraphicsWindow.Title = "small basic clock"
+ GraphicsWindow.BackgroundColor = "black"
+ GraphicsWindow.BrushColor = "green"
+ 
+ GraphicsWindow.FontName= "courier New"
+ While 1=1 
+   Program.Delay(1000)
+   draw()
+ EndWhile
+ 'tsagiig zur
+ Sub draw
+   GraphicsWindow.Clear()
+   GraphicsWindow.FontSize=40
+   GraphicsWindow.DrawText(0,10,Clock.Time)
+   'gert on sar gargaj irne 
+ EndSub
+   
