@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<!-- saved from url=(0140)https://makecode.microbit.org/?authcallback=1&state=cij3nh1o0g&token=ee3744e4bb871c7381ed39c35e9e65a06bc291a96c7b324805f3229ddfcf5ab4#editor -->
+<html lang="en" manifest="/---manifest" data-framework="typescript"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="blockly-ws-search-style">path.blocklyPath.blockly-ws-search-highlight {
+fill: black;
+}
+path.blocklyPath.blockly-ws-search-highlight.blockly-ws-search-current {
+fill: grey;
+}
+.blockly-ws-search-close-btn {
+background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjE0Ij48cGF0aCBkPSJNMTkgNi40MUwxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=) no-repeat top left;
+}
+.blockly-ws-search-next-btn {
+background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjE0Ij48cGF0aCBkPSJNNy40MSA4LjU5TDEyIDEzLjE3bDQuNTktNC41OEwxOCAxMGwtNiA2LTYtNiAxLjQxLTEuNDF6Ii8+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6IiBmaWxsPSJub25lIi8+PC9zdmc+) no-repeat top left;
+}
+.blockly-ws-search-previous-btn {
+background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjE0Ij48cGF0aCBkPSJNNy40MSAxNS40MUwxMiAxMC44M2w0LjU5IDQuNThMMTggMTRsLTYtNi02IDZ6Ii8+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==) no-repeat top left;
+}
+.blockly-ws-search {
+background: white;
+border: solid lightgrey .5px;
+box-shadow: 0px 10px 20px grey;
+justify-content: center;
+padding: .25em;
+position: absolute;
+z-index: 70;
+}
+.blockly-ws-search-input input {
+border: none;
+}
+.blockly-ws-search button {
+border: none;
+}
+.blockly-ws-search-actions {
+display: flex;
+}
+.blockly-ws-search-container {
+display: flex;
+}
+.blockly-ws-search-content {
+display: flex;
+}</style><style id="blockly-renderer-style-pxt-classic">.pxt-renderer.classic-theme .blocklyText,
+.pxt-renderer.classic-theme .blocklyFlyoutLabelText {
+font: 600 12pt "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
+}
+.pxt-renderer.classic-theme .blocklyText {
+fill: #fff;
+}
+.pxt-renderer.classic-theme .blocklyNonEditableText>rect:not(.blocklyDropdownRect),
+.pxt-renderer.classic-theme .blocklyEditableText>rect:not(.blocklyDropdownRect) {
+fill: #fff;
+}
+.pxt-renderer.classic-theme .blocklyNonEditableText>text,
+.pxt-renderer.classic-theme .blocklyEditableText>text,
+.pxt-renderer.classic-theme .blocklyNonEditableText>g>text,
+.pxt-renderer.classic-theme .blocklyEditableText>g>text {
+fill: #575E75;
+}
+.pxt-renderer.classic-theme .blocklyFlyoutLabelText {
+fill: #575E75;
+fill: #fff;
+}
+.pxt-renderer.classic-theme .blocklyText.blocklyBubbleText {
+fill: #575E75;
+}
+.pxt-renderer.classic-theme .blocklyDraggable:not(.blocklyDisabled)
+ .blocklyEditableText:not(.editing):hover>rect,
+.pxt-renderer.classic-theme .blocklyDraggable:not(.blocklyDisabled)
+ .blocklyEditableText:not(.editing):hover>.blocklyPath {
+stroke: #fff;
+stroke-width: 2;
+}
+.pxt-renderer.classic-theme .blocklyHtmlInput {
+font-family: "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
+font-weight: 600;
+color: #575E75;
+}
+.pxt-renderer.classic-theme .blocklyDropdownText {
+fill: #fff !important;
+}
+.pxt-renderer.classic-theme.blocklyWidgetDiv .goog-menuitem,
+.pxt-renderer.classic-theme.blocklyDropDownDiv .goog-menuitem {
+font-family: "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
+}
+.pxt-renderer.classic-theme.blocklyDropDownDiv .goog-menuitem-content {
+color: #fff;
+}
+.pxt-renderer.classic-theme .blocklyHighlightedConnectionPath {
+stroke: #fff200;
+}
+.pxt-renderer.classic-theme .blocklyDisabled > .blocklyOutlinePath {
+fill: url(#blocklyDisabledPattern5276422355826762)
+}
+.pxt-renderer.classic-theme .blocklyInsertionMarker>.blocklyPath {
+fill-opacity: 0.2;
+stroke: none;
+}
+.pxt-renderer.classic-theme .blocklyConnectionIndicator, .pxt-renderer.classic-theme .blocklyInputConnectionIndicator {
+fill: #ff0000;
+fill-opacity: 0.9;
+stroke: #ffff00;
+stroke-width: 3px;
+}
+.pxt-renderer.classic-theme .blocklyConnectionIndicator {
+display: none;
+}
+.pxt-renderer.classic-theme .blocklyBlockDragSurface > g > .blocklyDraggable > .blocklyConnectionIndicator {
+display: block;
+}
+.pxt-renderer.classic-theme .blocklyConnectionLine {
+stroke: #ffff00;
+stroke-width: 4px;
+}
+.pxt-renderer.classic-theme .blocklyConnectionLine.hidden {
+display: none;
+}
+.pxt-renderer.classic-theme .blocklyFlyoutHeading .blocklyFlyoutLabelText {font-size: 1.5rem;
+}</style><style id="blockly-common-style">.blocklySvg {
+background-color: #F9F9F9;
+outline: none;
+overflow: hidden;
+position: absolute;
+display: block;
+touch-action: none;
+}
+.blocklyRelativeWrapper {
+position: relative;
+width: 100%;
+height: 100%;
+}
+.blocklyWidgetDiv {
+display: none;
+position: absolute;
+z-index: 99999;
+}
+.injectionDiv {
+height: 100%;
+position: relative;
+overflow: hidden;
+touch-action: none;
+}
+.blocklyWidgetDiv.fieldTextInput {
+overflow: hidden;
+border: 1px solid;
+box-sizing: border-box;
+transform-origin: 0 0;
+-ms-transform-origin: 0 0;
+-moz-transform-origin: 0 0;
+-webkit-transform-origin: 0 0;
+}
+.blocklyTextDropDownArrow {
+position: absolute;
+}
+.blocklyNonSelectable {
+user-select: none;
+-ms-user-select: none;
+-webkit-user-select: none;
+}
+.blocklyWsDragSurface {
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+touch-action: none;
+cursor: move;
+}
+.blocklyWsDragSurface.blocklyOverflowVisible {
+overflow: visible;
+}
+.blocklyWsDragSurface.blocklyOverflowVisible {
+overflow: visible;
+}
+.blocklyBlockDragSurface {
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+overflow: visible !important;
+z-index: 50;
+}
+.blocklyBlockCanvas.blocklyTransitioning {
+transition: all 0.5s ease-in-out;
+}
+.blocklyBlockCanvas.blocklyCanvasTransitioning,
+.blocklyBubbleCanvas.blocklyCanvasTransitioning {
+transition: transform .5s;
+}
+.blocklyTooltipDiv {
+background-color: #ffffc7;
+border: 1px solid #ddc;
+box-shadow: 4px 4px 20px 1px rgba(0,0,0,.15);
+color: #000;
+display: none;
+font: 9pt sans-serif;
+opacity: .9;
+padding: 2px;
+position: absolute;
+z-index: 100000;
+}
+.blocklyDropDownDiv {
+position: absolute;
+left: 0;
+top: 0;
+z-index: 1000;
+display: none;
+border: 1px solid;
+border-color: #dadce0;
+background-color: #fff;
+border-radius: 2px;
+box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, .3);
+padding: 4px;
+box-shadow: 0 0 3px 1px rgba(0,0,0,.3);
+}
+.blocklyDropDownDiv.blocklyFocused {
+box-shadow: 0 0 6px 1px rgba(0,0,0,.3);
+}
+.blocklyDropDownContent {
+max-height: 300px;
+overflow: auto;
+overflow-x: hidden;
+position: relative;
+}
+.blocklyDropDownArrow {
+position: absolute;
+left: 0;
+top: 0;
+width: 16px;
+height: 16px;
+z-index: -1;
+background-color: inherit;
+border-color: inherit;
+}
+.blocklyDropDownButton {
+display: inline-block;
+float: left;
+padding: 0;
+margin: 4px;
+border-radius: 4px;
+outline: none;
+border: 1px solid;
+transition: box-shadow .1s;
+cursor: pointer;
+}
+.blocklyDropDownButtonHover {
+box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.2);
+}
+.blocklyDropDownButton:active {
+box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.2);
+}
+.blocklyDropDownButton > img {
+width: 80%;
+height: 80%;
+margin-top: 5%
+}
+.blocklyDropDownPlaceholder {
+display: inline-block;
+float: left;
+padding: 0;
+margin: 4px;
+}
+.blocklyNumPadButton {
+display: inline-block;
+float: left;
+padding: 0;
+width: 48px;
+height: 48px;
+margin: 4px;
+border-radius: 4px;
+background: #547AB2;
+color: #FFFFFF;
+outline: none;
+border: 1px solid #435F91;
+cursor: pointer;
+font-weight: 600;
+font-family: "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
+font-size: 12pt;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.blocklyNumPadButton > img {
+margin-top: 10%;
+width: 80%;
+height: 80%;
+}
+.blocklyNumPadButton:active {
+background: #435F91;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.blocklyArrowTop {
+border-top: 1px solid;
+border-left: 1px solid;
+border-top-left-radius: 4px;
+border-color: inherit;
+}
+.blocklyArrowBottom {
+border-bottom: 1px solid;
+border-right: 1px solid;
+border-bottom-right-radius: 4px;
+border-color: inherit;
+}
+.valueReportBox {
+min-width: 50px;
+max-width: 300px;
+max-height: 200px;
+overflow: auto;
+word-wrap: break-word;
+text-align: center;
+font-family: "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
+font-size: .8em;
+}
+.blocklyResizeSE {
+cursor: se-resize;
+fill: transparent;
+}
+.blocklyResizeSW {
+cursor: sw-resize;
+fill: transparent;
+}
+.blocklyResizeLine {
+stroke: #515A5A;
+stroke-width: 1;
+}
+.blocklyHighlightedConnectionPath {
+fill: none;
+stroke: #FFF200;
+stroke-width: 4px;
+}
+.blocklyPath {
+stroke-width: 1px;
+transition: stroke .4s;
+}
+.blocklyDraggable:not(.blocklySelected)>.blocklyPath.blocklyReporterHover {
+stroke-width: 2px;
+stroke: white;
+}
+.blocklyBlockBackground.blocklyFieldHover {
+stroke-width: 2px;
+stroke: white;
+}
+.blocklySelected>.blocklyPath {
+}
+.blocklyDraggable {
+cursor: url("https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/blockly/media/handopen.cur"), auto;
+cursor: grab;
+cursor: -webkit-grab;
+touch-action: none;
+}
+.blocklyDragging {
+cursor: url("https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/blockly/media/handclosed.cur"), auto;
+cursor: grabbing;
+cursor: -webkit-grabbing;
+touch-action: none;
+}
+.blocklyDraggable:active {
+cursor: url("https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/blockly/media/handclosed.cur"), auto;
+cursor: grabbing;
+cursor: -webkit-grabbing;
+}
+.blocklyBlockDragSurface .blocklyDraggable {
+cursor: url("https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/blockly/media/handclosed.cur"), auto;
+cursor: grabbing;
+cursor: -webkit-grabbing;
+}
+.blocklyDragging.blocklyDraggingDelete {
+cursor: url("https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/blockly/media/handdelete.cur"), auto;
+}
+.blocklyDragging>.blocklyPath,
+.blocklyDragging>.blocklyPathLight {
+fill-opacity: .8;
+stroke-opacity: .8;
+}
+.blocklyDragging>.blocklyPath {
+}
+.blocklyDisabled>.blocklyPath {
+fill-opacity: .8;
+stroke-opacity: .8;
+}
+.blocklyDisabled .blocklyEditableText .blocklyBlockBackground,
+.blocklyDisabled .blocklyNonEditableText .blocklyBlockBackground,
+.blocklyDisabled g[data-argument-type="dropdown"] .blocklyBlockBackground {
+fill-opacity: 0.1 !important;
+}
+.blocklyInsertionMarker>.blocklyPath {
+stroke: none;
+}
+.blocklyInsertionMarker>.blocklyIconGroup {
+display: none;
+}
+.blocklyInsertionMarker>.blocklyPath,
+.blocklyInsertionMarker>.blocklyPathLight,
+.blocklyInsertionMarker>.blocklyPathDark {
+fill-opacity: .2;
+stroke: none;
+}
+.blocklyReplaceable .blocklyPath {
+fill-opacity: 0.5;
+}
+.blocklyReplaceable .blocklyPathLight,
+.blocklyReplaceable .blocklyPathDark {
+display: none;
+}
+.blocklyText {
+cursor: default;
+fill: #fff;
+font-family: "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
+font-size: 12pt;
+font-weight: bold;
+}
+.blocklyTextTruncated {
+font-size: 11pt;
+}
+.blocklyMultilineText {
+font-family: monospace;
+}
+.blocklyNonEditableText>g>text {
+pointer-events: none;
+}
+.blocklyNonEditableText>text,
+.blocklyEditableText>text,
+.blocklyNonEditableText>g>text,
+.blocklyEditableText>g>text {
+fill: #575E75;
+}
+.blocklyDropdownText {
+fill: #fff !important;
+}
+.blocklyFlyout {
+position: absolute;
+z-index: 20;
+}
+.blocklyText text {
+cursor: default;
+}
+.blocklySvg text,
+.blocklyBlockDragSurface text {
+user-select: none;
+-ms-user-select: none;
+-webkit-user-select: none;
+cursor: inherit;
+}
+.blocklyHidden {
+display: none;
+}
+.blocklyFieldDropdown:not(.blocklyHidden) {
+display: block;
+}
+.blocklyIconGroup,
+.blocklyBreakpointIconGroup {
+cursor: default;
+}
+.blocklyIconGroup:not(:hover),
+.blocklyIconGroupReadonly {
+opacity: .6;
+}
+.blocklyBreakpointIconGroup:hover,
+.blocklyBreakpointIconGroupReadonly {
+fill-opacity: .6;
+}
+.blocklyIconShape {
+fill: #000;
+stroke-width: 1px;
+stroke: #fff;
+cursor: pointer;
+}
+.blocklyIconSymbol {
+fill: #fff;
+}
+.blocklyMinimalBody {
+margin: 0;
+padding: 0;
+background-color: #FAF6BD;
+}
+.blocklyUneditableMinimalBody {
+fill: #FAF6BD;
+}
+.blocklyHtmlInput {
+border: none;
+font-family: "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
+font-size: 12pt;
+height: 100%;
+margin: 0;
+outline: none;
+box-sizing: border-box;
+width: 100%;
+text-align: center;
+color: #575E75;
+font-weight: bold;
+}
+.blocklyHtmlInput::-ms-clear {
+display: none;
+}
+.blocklyMainBackground {
+stroke-width: 1;
+stroke: #c6c6c6;
+touch-action: none;
+}
+.blocklyMutatorBackground {
+fill: #fff;
+stroke: #ddd;
+stroke-width: 1;
+}
+.blocklyFlyoutBackground {
+fill: #444;
+fill-opacity: .8;
+}
+.blocklyMainWorkspaceScrollbar {
+z-index: 20;
+}
+.blocklyFlyoutScrollbar {
+z-index: 30;
+}
+.blocklyScrollbarHorizontal,
+.blocklyScrollbarVertical {
+position: absolute;
+outline: none;
+touch-action: none;
+}
+.blocklyScrollbarBackground {
+opacity: 0;
+}
+.blocklyScrollbarHandle {
+fill: #CECDCE;
+}
+.blocklyScrollbarBackground:hover+.blocklyScrollbarHandle,
+.blocklyScrollbarHandle:hover {
+fill: #CECDCEHover;
+}
+.blocklyZoom>image {
+opacity: 1;
+}
+.blocklyFlyout .blocklyScrollbarHandle {
+fill: #bbb;
+}
+.blocklyFlyout .blocklyScrollbarBackground:hover+.blocklyScrollbarHandle,
+.blocklyFlyout .blocklyScrollbarHandle:hover {
+fill: #aaa;
+}
+.blocklyInvalidInput {
+background: #faa;
+}
+.blocklyVerticalMarker {
+stroke-width: 3px;
+fill: rgba(255,255,255,.5);
+pointer-events: none;
+}
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-icon,
+.blocklyDropDownDiv .goog-option-selected .goog-menuitem-checkbox,
+.blocklyDropDownDiv .goog-option-selected .goog-menuitem-icon {
+background: url(https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/blockly/media/sprites.png) no-repeat -48px -16px;
+}
+.blocklyWidgetDiv .goog-menu {
+background: #fff;
+border-color: transparent;
+border-style: solid;
+border-width: 1px;
+cursor: default;
+font: normal 13px "Helvetica Neue", Helvetica, sans-serif;
+margin: 0;
+outline: none;
+padding: 4px 0;
+position: absolute;
+overflow-y: auto;
+overflow-x: hidden;
+max-height: 100%;
+z-index: 20000;
+box-shadow: 0px 0px 3px 1px rgba(0,0,0,.3);
+}
+.blocklyDropDownDiv .goog-menu {
+cursor: default;
+font: normal 13px "Helvetica Neue", Helvetica, sans-serif;
+outline: none;
+z-index: 20000;
+box-shadow: 0px 0px 3px 1px rgba(0,0,0,.3);
+}
+.blocklyWidgetDiv .goog-menu.focused {
+box-shadow: 0px 0px 6px 1px rgba(0,0,0,.3);
+}
+.blocklyDropDownDiv .goog-menu {
+cursor: default;
+font: normal 13px "Helvetica Neue", Helvetica, sans-serif;
+outline: none;
+z-index: 20000;
+}
+.blocklyWidgetDiv .goog-menuitem,
+.blocklyDropDownDiv .goog-menuitem {
+color: #000;
+font: normal 13px "Helvetica Neue", Helvetica, sans-serif;
+list-style: none;
+margin: 0;
+min-width: 7em;
+border: none;
+padding: 6px 15px;
+white-space: nowrap;
+cursor: pointer;
+}
+.blocklyWidgetDiv .goog-menu-nocheckbox .goog-menuitem,
+.blocklyWidgetDiv .goog-menu-noicon .goog-menuitem,
+.blocklyDropDownDiv .goog-menu-nocheckbox .goog-menuitem,
+.blocklyDropDownDiv .goog-menu-noicon .goog-menuitem {
+padding-left: 12px;
+}
+.blocklyWidgetDiv .goog-menuitem-content,
+.blocklyDropDownDiv .goog-menuitem-content {
+font-family: Arial, sans-serif;
+font-size: 13px;
+}
+.blocklyWidgetDiv .goog-menuitem-content {
+color: #000;
+}
+.blocklyDropDownDiv .goog-menuitem-content {
+color: #000;
+}
+.blocklyWidgetDiv .goog-menuitem-disabled,
+.blocklyDropDownDiv .goog-menuitem-disabled {
+cursor: inherit;
+}
+.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-content,
+.blocklyDropDownDiv .goog-menuitem-disabled .goog-menuitem-content {
+color: #ccc !important;
+}
+.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-icon,
+.blocklyDropDownDiv .goog-menuitem-disabled .goog-menuitem-icon {
+opacity: .3;
+filter: alpha(opacity=30);
+}
+.blocklyWidgetDiv .goog-menuitem-highlight ,
+.blocklyDropDownDiv .goog-menuitem-highlight {
+background-color: rgba(0,0,0,.1);
+}
+.blocklyWidgetDiv .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-menuitem-icon,
+.blocklyDropDownDiv .goog-menuitem-checkbox,
+.blocklyDropDownDiv .goog-menuitem-icon {
+background-repeat: no-repeat;
+height: 16px;
+left: 6px;
+position: absolute;
+right: auto;
+vertical-align: middle;
+width: 16px;
+}
+.blocklyWidgetDiv .goog-menuitem-rtl .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-menuitem-rtl .goog-menuitem-icon,
+.blocklyDropDownDiv .goog-menuitem-rtl .goog-menuitem-checkbox,
+.blocklyDropDownDiv .goog-menuitem-rtl .goog-menuitem-icon {
+left: auto;
+right: 6px;
+}
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-icon,
+.blocklyDropDownDiv .goog-option-selected .goog-menuitem-checkbox,
+.blocklyDropDownDiv .goog-option-selected .goog-menuitem-icon {
+background: url(https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/blockly/media/sprites.png) no-repeat -48px -16px !important;
+position: static;
+float: left;
+margin-left: -24px;
+}
+.blocklyWidgetDiv .goog-menuitem-rtl .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-menuitem-rtl .goog-menuitem-icon,
+.blocklyDropDownDiv .goog-menuitem-rtl .goog-menuitem-checkbox,
+.blocklyDropDownDiv .goog-menuitem-rtl .goog-menuitem-icon {
+float: right;
+margin-right: -24px;
+}
+.blocklyWidgetDiv .goog-menuseparator, 
+.blocklyDropDownDiv .goog-menuseparator {
+border-top: 1px solid #ccc;
+margin: 4px 0;
+padding: 0;
+}
+.blocklyComputeCanvas {
+position: absolute;
+width: 0;
+height: 0;
+}
+.blocklyNoPointerEvents {
+pointer-events: none;
+}
+.blocklyContextMenu {
+border-radius: 4px;
+max-height: 100%;
+}
+.blocklyDropdownMenu {
+border-radius: 2px;
+padding: 0 !important;
+}
+.blocklyDropDownNumPad {
+background-color: #547AB2;
+}
+.blocklyWidgetDiv .blocklyDropdownMenu .goog-menuitem,
+.blocklyDropDownDiv .blocklyDropdownMenu .goog-menuitem,
+.blocklyDropdownMenu .blocklyMenuItem {
+padding-left: 28px;
+}
+.blocklyDropdownMenu .blocklyMenuItemRtl {
+padding-left: 5px;
+padding-right: 28px;
+}
+.blocklyWidgetDiv .blocklyMenu {
+background: #fff;
+border: 1px solid transparent;
+box-shadow: 0 0 3px 1px rgba(0,0,0,.3);
+font: normal 13px Arial, sans-serif;
+margin: 0;
+outline: none;
+padding: 4px 0;
+position: absolute;
+overflow-y: auto;
+overflow-x: hidden;
+max-height: 100%;
+z-index: 20000;
+}
+.blocklyDropDownDiv .goog-menu {
+cursor: default;
+font: normal 13px "Helvetica Neue", Helvetica, sans-serif;
+outline: none;
+z-index: 20000;
+box-shadow: 0px 0px 3px 1px rgba(0,0,0,.3);
+}
+.blocklyWidgetDiv .goog-menu.focused,
+.blocklyWidgetDiv .blocklyMenu.blocklyFocused {
+box-shadow: 0 0 6px 1px rgba(0,0,0,.3);
+}
+.blocklyDropDownDiv .blocklyMenu {
+background: inherit;
+border: inherit;
+font: normal 13px "Helvetica Neue", Helvetica, sans-serif;
+outline: none;
+position: relative;
+z-index: 20000;
+}
+.blocklyMenuItem {
+border: none;
+color: #000;
+cursor: pointer;
+list-style: none;
+margin: 0;
+min-width: 7em;
+padding: 6px 15px;
+white-space: nowrap;
+}
+.blocklyMenuItemDisabled {
+color: #ccc;
+cursor: inherit;
+}
+.blocklyMenuItemHighlight {
+background-color: rgba(0,0,0,.1);
+}
+.blocklyMenuItemCheckbox {
+height: 16px;
+position: absolute;
+width: 16px;
+}
+.blocklyMenuItemSelected .blocklyMenuItemCheckbox {
+background: url(https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/blockly/media/sprites.png) no-repeat -48px -16px;
+float: left;
+margin-left: -24px;
+position: static;
+}
+.blocklyMenuItemRtl .blocklyMenuItemCheckbox {
+float: right;
+margin-right: -24px;
+}
+.blocklyDropDownDiv .goog-slider-horizontal {
+margin: 8px;
+height: 22px;
+width: 150px;
+position: relative;
+outline: none;
+border-radius: 11px;
+margin-bottom: 20px;
+background: #547AB2
+}
+.blocklyDropDownDiv .goog-slider-horizontal .goog-slider-thumb {
+width: 26px;
+height: 26px;
+top: -1px;
+position: absolute;
+background-color: white;
+border-radius: 100%;
+-webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.15);
+-moz-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.15);
+box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.15);
+cursor: pointer
+}
+.blocklyFieldSliderLabel {
+font-family: "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
+font-size: 0.65rem;
+color: #575E75;
+margin: 8px;
+}
+.blocklyFieldSliderLabelText {
+font-weight: bold;
+}
+.blocklyFieldSliderReadout {
+margin-left: 10px;
+}
+.blocklyHighlighted>.blocklyPath {
+stroke: #ff8b27;
+stroke-width: 5px;
+}
+.argumentEditorRemoveIcon {
+position: absolute;
+width: 24px;
+height: 24px;
+top: -40px;
+left: 50%;
+margin-left: -12px;
+cursor: pointer;
+}
+.functioneditor i.argumentEditorTypeIcon {
+position: absolute;
+width: 24px;
+height: 24px;
+top: 40px;
+left: 50%;
+margin-left: -12px;
+}
+.blocklyWidgetDiv.fieldTextInput.argumentEditorInput {
+overflow: visible;
+}
+.functionNameText {
+font-weight: bold;
+}
+.field-text-quote {
+fill: #a31515 !important;
+}
+.blocklyCommentTextarea {
+background-color: #FAF6BD;
+border: 0;
+outline: 0;
+margin: 0;
+padding: 3px;
+resize: none;
+display: block;
+color: #575E75;
+overflow: hidden;
+font-size: 12pt;
+line-height: 22px;
+}
+.blocklyFlyoutButton {
+fill: #F4F4F4;
+}
+.blocklyFlyoutButtonBackground {
+stroke: #fff;
+}
+.blocklyFlyoutButton .blocklyText {
+fill: #575E75;
+}
+.blocklyFlyoutButtonShadow {
+fill: none;
+}
+.blocklyFlyoutButton:hover {
+fill: #EAEAEA;
+cursor: pointer;
+}
+.blocklyFlyoutLabel {
+cursor: default;
+}
+.blocklyFlyoutLabelBackground {
+opacity: 0;
+}
+.blocklyFlyoutLabelText {
+font-family: "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
+font-size: 14pt;
+fill: #575E75;
+font-weight: bold;
+}
+.blocklyTreeRow:not(.blocklyTreeSelected):hover {
+background-color: rgba(255, 255, 255, 0.2);
+}
+.blocklyToolboxDiv[layout="h"] .blocklyToolboxCategory {
+margin: 1px 5px 1px 0;
+}
+.blocklyToolboxDiv[dir="RTL"][layout="h"] .blocklyToolboxCategory {
+margin: 1px 0 1px 5px;
+}
+.blocklyTreeRow {
+height: 22px;
+line-height: 22px;
+margin-bottom: 3px;
+padding-right: 8px;
+white-space: nowrap;
+}
+.blocklyToolboxDiv[dir="RTL"] .blocklyTreeRow {
+margin-left: 8px;
+padding-right: 0px
+}
+.blocklyTreeIcon {
+background-image: url(https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/blockly/media/sprites.png);
+height: 16px;
+vertical-align: middle;
+visibility: hidden;
+width: 16px;
+}
+.blocklyTreeIconClosed {
+background-position: -32px -1px;
+}
+.blocklyToolboxDiv[dir="RTL"] .blocklyTreeIconClosed {
+background-position: 0 -1px;
+}
+.blocklyTreeSelected>.blocklyTreeIconClosed {
+background-position: -32px -17px;
+}
+.blocklyToolboxDiv[dir="RTL"] .blocklyTreeSelected>.blocklyTreeIconClosed {
+background-position: 0 -17px;
+}
+.blocklyTreeIconOpen {
+background-position: -16px -1px;
+}
+.blocklyTreeSelected>.blocklyTreeIconOpen {
+background-position: -16px -17px;
+}
+.blocklyTreeLabel {
+cursor: default;
+font: 16px sans-serif;
+padding: 0 3px;
+vertical-align: middle;
+}
+.blocklyToolboxDelete .blocklyTreeLabel {
+cursor: url("https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/blockly/media/handdelete.cur"), auto;
+}
+.blocklyTreeSelected .blocklyTreeLabel {
+color: #fff;
+}
+.blocklyTreeSeparator {
+border-bottom: solid #e5e5e5 1px;
+height: 0;
+margin: 5px 0;
+}
+.blocklyToolboxDiv[layout="h"] .blocklyTreeSeparator {
+border-right: solid #e5e5e5 1px;
+border-bottom: none;
+height: auto;
+margin: 0 5px 0 5px;
+padding: 5px 0;
+width: 0;
+}
+.blocklyToolboxDelete {
+cursor: url("https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/blockly/media/handdelete.cur"), auto;
+}
+.blocklyToolboxGrab {
+cursor: url("https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/blockly/media/handclosed.cur"), auto;
+cursor: grabbing;
+cursor: -webkit-grabbing;
+}
+.blocklyToolboxDiv {
+background-color: #ddd;
+overflow-x: visible;
+overflow-y: auto;
+padding: 4px 0 4px 0;
+position: absolute;
+z-index: 70;
+-webkit-tap-highlight-color: transparent;
+}
+.blocklyToolboxContents {
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+}
+.blocklyToolboxContents:focus {
+outline: none;
+}
+.blocklyCommentForeignObject {
+position: relative;
+z-index: 0;
+}
+.blocklyComment > image {
+cursor: pointer
+}
+.blocklyCommentRect {
+fill: #E7DE8E;
+stroke: #bcA903;
+stroke-width: 1px;
+}
+.blocklyCommentTarget {
+fill: transparent;
+stroke: #F9F3A1;
+}
+.blocklyCommentTargetFocused {
+fill: none;
+}
+.blocklyCommentText {
+fill: #000;
+pointer-events: none;
+}
+.blocklyCommentHandleTarget {
+fill: none;
+}
+.blocklyCommentHandleTargetFocused {
+fill: transparent;
+}
+.blocklyFocused>.blocklyCommentRect {
+fill: #FFB900;
+stroke: #B9B272;
+}
+.blocklySelected>.blocklyCommentTarget {
+stroke: #FFB900;
+stroke-width: 1px;
+}
+.blocklyCommentForeignObject {
+position: relative;
+z-index: 0;
+}
+.blocklyCommentRect {
+fill: #FAF6BD;
+stroke: #F9F3A1;
+stroke-width: 1px
+}
+.blocklyCommentTarget {
+fill: transparent;
+stroke: #F9F3A1;
+}
+.blocklyCommentTargetFocused {
+fill: none;
+}
+.blocklyCommentHandleTarget {
+fill: none;
+}
+.blocklyCommentHandleTargetFocused {
+fill: transparent;
+}
+.blocklyUneditableComment {
+fill: #575E75;
+}
+.blocklyCommentDeleteIcon {
+cursor: pointer;
+fill: #000;
+display: none;
+}
+.blocklyFocused > .blocklyCommentDeleteIcon,
+.blocklyCommentBubble > .blocklyCommentDeleteIcon {
+display: block;
+}
+.blocklySelected > .blocklyCommentDeleteIcon {
+display: block;
+}
+.blocklyDeleteIconShape.blocklyDeleteIconHighlighted {
+fill: rgba(255, 255, 255, 0.20);
+}
+.blocklyCommentDeleteIcon {
+cursor: pointer;
+fill: #000;
+display: none
+}
+.blocklySelected > .blocklyCommentDeleteIcon {
+display: block
+}
+.blocklyZoom>image, .blocklyZoom>svg>image {
+opacity: .4;
+}
+.blocklyZoom>image:hover, .blocklyZoom>svg>image:hover {
+opacity: .6;
+}
+.blocklyZoom>image:active, .blocklyZoom>svg>image:active {
+opacity: .8;
+}
+.blocklyAngleCenterPoint {
+stroke: #fff;
+stroke-width: 1;
+fill: #fff;
+}
+.blocklyAngleDragHandle {
+stroke: #fff;
+stroke-width: 5;
+stroke-opacity: 0.25;
+fill: #fff;
+cursor: pointer;
+}
+.blocklyAngleMarks {
+stroke: #fff;
+stroke-width: 1;
+stroke-opacity: 0.5;
+}
+.blocklyAngleGauge {
+fill: #fff;
+fill-opacity: 0.20;
+}
+.blocklyAngleLine {
+stroke: #fff;
+stroke-width: 1;
+stroke-linecap: round;
+pointer-events: none;
+}
+.blocklyColourTable {
+outline: none;
+border-radius: 11px;
+border-collapse: separate;
+border-spacing: 4px;
+}
+.blocklyColourTable > tr > td {
+height: 22px;
+width: 22px;
+margin: 0;
+border: 0;
+text-align: center;
+cursor: pointer;
+border-radius: 4px;
+border: 2px solid rgba(0,0,0,.1);
+}
+.blocklyColourTable > tr > td:hover {
+border: 1px solid #FFF;
+box-sizing: border-box;
+}
+.blocklyColourTable > tr > td.blocklyColourSelected {
+border: 1px solid #000;
+box-sizing: border-box;
+color: #fff;
+}
+.blocklyColourTable>tr>td.blocklyColourHighlighted {
+border-color: #eee;
+box-shadow: 2px 2px 7px 2px rgba(0,0,0,.3);
+position: relative;
+}
+.blocklyColourSelected, .blocklyColourSelected:hover {
+border-color: #eee !important;
+outline: 1px solid #333;
+position: relative;
+}
+.blocklyHtmlTextAreaInput {
+font-family: monospace;
+resize: none;
+overflow: hidden;
+height: 100%;
+text-align: left;
+}
+.blocklyHtmlTextAreaInputOverflowedY {
+overflow-y: scroll;
+}</style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <script type="text/javascript">
+    if(/[&?]translate=1/.test(window.location.href)) {
+		var _jipt = [];
+        _jipt.push(['project', 'makecode']);
+        _jipt.push(['escape', function() {
+            window.location.href = window.location.href.replace(/[$\?]translate=1/, '');
+        }]);
+        _jipt.push(['before_dom_insert', function(text, node, attribute) {
+            if (text)
+                text = text.replace(/^\{(id|loc):[^\}]+\}/g, '');
+            return text;
+        }]);
+        // inject crowdin
+        (function _() {
+            var s = document.createElement("script");
+            s.setAttribute("type", "text/javascript");
+            s.setAttribute("src", "//cdn.crowdin.com/jipt/jipt.js");
+            document.head.insertBefore(s, document.head.firstElementChild);
+        })();
+    }
+	</script>
+
+    
+<!-- include appmeta.html -->
+
+<!-- include robotsmeta.html -->
+
+<!-- end include robotsmeta.html -->
+
+<title>Microsoft MakeCode for micro:bit</title>
+<meta name="description" content="A Blocks / JavaScript code editor for the micro:bit powered by Microsoft MakeCode.">
+<link rel="manifest" href="https://makecode.microbit.org/blob/32fc0ea616f1323c58a8aa15cc7285f13d6aa407/sim.webmanifest">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Microsoft MakeCode for micro:bit">
+<meta name="apple-mobile-web-app-status-bar-style" content="translucent-black">
+<meta name="format-detection" content="telephone=no">
+<meta name="application-name" content="Microsoft MakeCode for micro:bit">
+<meta name="apple-itunes-app" content="app-id=1092687276">
+<meta name="msapplication-TileColor" content="#5C005C">
+<meta name="msapplication-TileImage" content="https://pxt.azureedge.net/blob/4de54063603c8d16531078818a83f7c29a3588fa/static/icons/apple-touch-icon.png">
+<meta name="msapplication-config" content="none">
+<meta name="theme-color" content="#5C005C">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="Microsoft MakeCode for micro:bit">
+<meta name="twitter:description" content="A Blocks / JavaScript code editor for the micro:bit powered by Microsoft MakeCode.">
+<meta name="twitter:image" content="https://pxt.azureedge.net/blob/4de54063603c8d16531078818a83f7c29a3588fa/static/icons/apple-touch-icon.png">
+
+<meta property="og:title" content="Microsoft MakeCode for micro:bit">
+<meta property="og:site_name" content="Microsoft MakeCode for micro:bit">
+<meta property="og:description" content="A Blocks / JavaScript code editor for the micro:bit powered by Microsoft MakeCode.">
+<meta property="og:image" content="https://pxt.azureedge.net/blob/4de54063603c8d16531078818a83f7c29a3588fa/static/icons/apple-touch-icon.png">
+
+<link rel="apple-touch-icon" href="https://pxt.azureedge.net/blob/4de54063603c8d16531078818a83f7c29a3588fa/static/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="https://pxt.azureedge.net/blob/4de54063603c8d16531078818a83f7c29a3588fa/static/icons/apple-touch-icon.png">
+<link rel="shortcut icon" href="https://pxt.azureedge.net/blob/4de54063603c8d16531078818a83f7c29a3588fa/static/icons/apple-touch-icon.png">
+
+<!-- end include appmeta.html -->
+
+
+    <link rel="stylesheet" data-rtl="https://pxt.azureedge.net/blob/72af86e6e18fd694ed49dbe908a259d1fa927b8d/rtlsemantic.css" href="./smile_files/semantic.css" type="text/css">
+<script src="./smile_files/ai.2.min.js.download"></script><style type="text/css">.ui.accent { color: #5C005C; }
+                .ui.inverted.menu .accent.active.item, .ui.inverted.accent.menu  { background-color: #5C005C; }</style><link href="./smile_files/blockly.css" rel="stylesheet" type="text/css" id="style-blockly.css"><style>.immersive-reader-button{cursor:pointer;display:inline-block;padding:5px;} .immersive-reader-button:hover{background:rgba(0,0,0,.05);border-radius:2px</style></head>
+
+<body class="main"><div id="lightningjs-usabilla_live" style="display: none;"><div><iframe frameborder="0" id="lightningjs-frame-usabilla_live" src="./smile_files/saved_resource.html"></iframe></div></div>
+    
+
+    <div id="custom-content"></div>
+    <div id="blocks-editor-field-div">
+    </div>
+
+    <div id="allcontent">
+        <div id="editorcontent">
+            <div id="content" class="ui dimmable full-abs"><div id="root" class="ui dimmable ide tutorialSimSidebar full-abs"><header class="menubar" role="banner"><div class="ui accessibleMenu borderless fixed menu" role="menubar"><div class="ui item link   inverted menu " role="menuitem" aria-label="Skip to JavaScript editor" title="Skip to JavaScript editor" tabindex="0"><i class="icon xicon js icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Skip to JavaScript editor</span></div><div class="ui item link   inverted menu " role="menuitem" aria-label="Skip to Python editor" title="Skip to Python editor" tabindex="0"><i class="icon xicon python icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Skip to Python editor</span></div><div class="ui item link   inverted menu " role="menuitem" aria-label="Select Language" title="Select Language" tabindex="0"><i class="icon xicon globe icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Select Language</span></div><div class="ui item link   inverted menu " role="menuitem" aria-label="High Contrast On" title="High Contrast On" tabindex="0"><span class="ui text">High Contrast On</span></div><div class="ui item link   inverted menu " role="menuitem" aria-label="Go Home" title="Go Home" tabindex="0"><i class="icon home icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Go Home</span></div></div><div></div><div id="mainmenu" class="ui borderless fixed menu inverted " role="menubar"><div class="left menu"><div class="ui item logo organization"><img class="ui logo mobile hide" src="./smile_files/Microsoft_logo_rgb_W-white_D.png" alt="Microsoft MakeCode Logo"><img class="ui image mobile only" src="./smile_files/Microsoft_logo_rgb_W-white_D-square.png" alt="Microsoft MakeCode Logo"></div><div aria-label="micro:bit Logo" role="menuitem" class="ui item logo brand mobile hide"><img class="ui  logo" src="./smile_files/logo.portrait.white.svg" alt="micro:bit Logo"></div></div><div class="center menu"><div class="ui item link editor-menuitem"><div id="editortoggle" class="ui grid padded " role="listbox" aria-orientation="horizontal"><div class="ui item link   base-menuitem blocks-menuitem selected active" role="option" aria-label="Convert code to Blocks" aria-selected="true" title="Convert code to Blocks" tabindex="0"><i class="icon xicon blocks icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text landscape only">Blocks</span></div><div class="ui item link   base-menuitem javascript-menuitem  " role="option" aria-label="Convert code to JavaScript" aria-selected="false" title="Convert code to JavaScript" tabindex="0"><i class="icon xicon js icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text landscape only">JavaScript</span></div><div role="menuitem" title="Select code editor language" aria-haspopup="false" id="editordropdown" class="ui dropdown icon item button attached right " tabindex="0"><i class="icon chevron down " aria-hidden="true" role="presentation"></i><div role="menu" aria-label="Dropdown menu Select code editor language" aria-hidden="false" class="menu"><div class="ui item link   base-menuitem javascript-menuitem  " role="option" aria-label="Convert code to JavaScript" aria-selected="false" title="Convert code to JavaScript" tabindex="-1"><i class="icon xicon js icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text landscape only">JavaScript</span></div><div class="ui item link   base-menuitem python-menuitem  " role="option" aria-label="Convert code to Python" aria-selected="false" title="Convert code to Python" tabindex="-1"><i class="icon xicon python icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text landscape only">Python</span></div></div></div><div class="ui item toggle "></div></div></div></div><div class="right menu"><div></div><div class="ui item link   icon openproject mobile hide " role="menuitem" aria-label="Home screen" title="Home" tabindex="0"><i class="icon home large " aria-hidden="true" role="presentation"></i></div><div class="ui item link   icon shareproject mobile hide " role="menuitem" aria-label="Share Project" title="Publish your game to create a shareable link" tabindex="0"><i class="icon share alternate large " aria-hidden="true" role="presentation"></i></div><div role="menuitem" title="Help" aria-haspopup="false" class="ui dropdown icon item mobile hide help-dropdown-menuitem" tabindex="0"><i class="icon help circle large " aria-hidden="true" role="presentation"></i><div role="menu" aria-label="Dropdown menu Help" aria-hidden="false" class="menu"><div class="ui item link   ui  " role="menuitem" aria-label="Tour" title="Tour" tabindex="0"><span class="ui text">Tour</span></div><a role="menuitem" aria-label="Support" title="Support" class="ui item link " href="https://support.microbit.org/" target="docs">Support</a><div class="ui item link   ui  " role="menuitem" aria-label="Reference" title="Reference" tabindex="0"><span class="ui text">Reference</span></div><div class="ui item link   ui  " role="menuitem" aria-label="Hardware" title="Hardware" tabindex="0"><span class="ui text">Hardware</span></div><a role="menuitem" aria-label="Buy" title="Buy" class="ui item link " href="https://microbit.org/resellers" target="docs">Buy</a><div class="ui item link   ui  " role="menuitem" aria-label="Blocks" title="Blocks" tabindex="0"><span class="ui text">Blocks</span></div></div></div><div role="menuitem" title="More..." aria-haspopup="false" class="ui dropdown icon item icon more-dropdown-menuitem" tabindex="0"><i class="icon setting large " aria-hidden="true" role="presentation"></i><div role="menu" aria-label="Dropdown menu More..." aria-hidden="false" class="menu"><div class="ui item link   mobile only inherit " role="menuitem" aria-label="Home screen" title="Home" tabindex="0"><i class="icon home icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Home</span></div><div class="ui item link   mobile only inherit " role="menuitem" aria-label="Share Project" title="Publish your game to create a shareable link" tabindex="0"><i class="icon share alternate icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Share</span></div><div class="ui divider mobile only inherit"></div><div class="ui item link    " role="menuitem" aria-label="Project Settings" title="Project Settings" tabindex="-1"><i class="icon options icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Project Settings</span></div><div class="ui item link    " role="menuitem" aria-label="Extensions" title="Extensions" tabindex="-1"><i class="icon disk outline icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Extensions</span></div><div class="ui item link    " role="menuitem" aria-label="Connect Device" title="Connect Device" tabindex="-1"><i class="icon xicon microbit icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Connect Device</span></div><div class="ui item link    " role="menuitem" aria-label="Print..." title="Print..." tabindex="-1"><i class="icon print icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Print...</span></div><div class="ui item link    " role="menuitem" aria-label="Delete Project" title="Delete Project" tabindex="-1"><i class="icon trash icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Delete Project</span></div><div class="ui divider"></div><div class="ui item link    " role="menuitem" aria-label="Language" title="Language" tabindex="-1"><i class="icon xicon globe icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Language</span></div><div class="ui item link    " role="menuitem" aria-label="High Contrast On" title="High Contrast On" tabindex="-1"><span class="ui text">High Contrast On</span></div><div class="ui item link    " role="menuitem" aria-label="Green Screen On" title="Green Screen On" tabindex="-1"><span class="ui text">Green Screen On</span></div><a role="menuitem" aria-label="Support" title="Support" class="ui item link setting-docs-item mobile only inherit" href="https://support.microbit.org/" target="docs">Support</a><div class="ui item link   ui setting-docs-item mobile only inherit " role="menuitem" aria-label="Reference" title="Reference" tabindex="0"><span class="ui text">Reference</span></div><div class="ui item link   ui setting-docs-item mobile only inherit " role="menuitem" aria-label="Hardware" title="Hardware" tabindex="0"><span class="ui text">Hardware</span></div><a role="menuitem" aria-label="Buy" title="Buy" class="ui item link setting-docs-item mobile only inherit" href="https://microbit.org/resellers" target="docs">Buy</a><div class="ui divider"></div><div class="ui item link    " role="menuitem" aria-label="Report Abuse..." title="Report Abuse..." tabindex="-1"><i class="icon warning circle icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Report Abuse...</span></div><div class="ui item link    " role="menuitem" aria-label="Reset" title="Reset" tabindex="-1"><i class="icon sign out icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Reset</span></div><div class="ui item link    " role="menuitem" aria-label="About..." title="About..." tabindex="-1"><span class="ui text">About...</span></div></div></div><div role="menuitem" title="User Menu" aria-haspopup="false" class="ui dropdown item icon user-dropdown-menuitem logged-in-dropdown" tabindex="0"><div class="avatar"><img src="./smile_files/unnamed.png" alt="User Menu" referrerpolicy="no-referrer"></div><div role="menu" aria-label="Dropdown menu User Menu" aria-hidden="false" class="menu"><div class="ui item link    " role="menuitem" aria-label="My Profile" title="My Profile" tabindex="-1"><span class="ui text">My Profile</span></div><div class="ui divider"></div><div class="ui item link    " role="menuitem" aria-label="Sign out" title="Sign out" tabindex="-1"><span class="ui text">Sign out</span></div></div></div></div></div></header><div id="simulator" class="simulator"><div id="editorSidebar" class="editor-sidebar"><div class="simulator-container "><div class="ui items simPanel invisibleScrollbar"><div id="boardview" class="ui vertical editorFloat" role="region" aria-label="Simulator" tabindex="0"><div id="simulators" class="simulator"><div class="simframe ui embed" style="padding-bottom: 81.9672%;"><iframe id="sim-frame-14089234119601389650.24015432055517438" title="Simulator" allowfullscreen="" allow="autoplay;microphone" sandbox="allow-same-origin allow-scripts" class="no-select" src="./smile_files/---simulator.html" frameborder="0" data-runid="1500111739146669898040.8372588249237227" data-origin="https://trg-microbit.userpxt.io" style="" data-runtimeid="blue-17067049020490872730.08751874211197364"></iframe><i class="" style="display: none;"></i><div class="ui active loader" style="display: none;"></div></div></div><div id="debugger" class="ui item landscape only"></div></div><aside class="ui item grid centered simtoolbar portrait " role="complementary" aria-label="Simulator toolbar"><div class="ui icon tiny buttons" style="padding: 0px;"><button class="ui button icon  play-button  stop" title="Stop the simulator" tabindex="0"><i class="icon stop " aria-hidden="true" role="presentation"></i></button><button class="ui button icon  fullscreen-button tablet only hidefullscreen" title="Launch in fullscreen" tabindex="0"><i class="icon xicon fullscreen " aria-hidden="true" role="presentation"></i></button><button class="ui button icon  restart-button" title="Restart the simulator" tabindex="0"><i class="icon refresh " aria-hidden="true" role="presentation"></i></button><button class="ui button icon  debug-button " title="Toggle debug mode" tabindex="0"><i class="icon icon bug " aria-hidden="true" role="presentation"></i></button><button class="ui button icon  expand-button portrait only editortools-btn hidefullscreen" title="Hide the simulator" tabindex="0"><i class="icon stop " aria-hidden="true" role="presentation"></i></button></div><div class="ui icon tiny buttons computer only" style="padding: 0px;"><button class="ui button icon   mute-button " title="Mute audio" tabindex="0"><i class="icon volume up " aria-hidden="true" role="presentation"></i></button></div><div class="ui icon tiny buttons computer only" style="padding: 0px;"><button class="ui button icon  screenshot-button " title="Take Screenshot" tabindex="0"><i class="icon icon camera left " aria-hidden="true" role="presentation"></i></button><button class="ui button icon  fullscreen-button" title="Launch in fullscreen" tabindex="0"><i class="icon xicon fullscreen " aria-hidden="true" role="presentation"></i></button></div></aside><div class="ui item portrait hide hidefullscreen"></div><div class="ui item grid centered portrait hide hidefullscreen"></div><div class="ui item grid centered portrait hide hidefullscreen"></div><div id="serialPreview" class="ui editorFloat portrait hide hidefullscreen"><div></div><div></div></div><div id="miniSimOverlay" role="button" title="Open in fullscreen"></div></div></div></div></div><div id="maineditor" class="" role="main" aria-hidden="false"><button class="ui button icon  computer only collapse-button large" id="computertogglesim" title="Hide the simulator" tabindex="0"><i class="icon inverted chevron left " aria-hidden="true" role="presentation"></i></button><div class="full-abs" id="pxtJsonEditor" style="display: none;"></div><div class="full-abs" id="githubEditor" style="display: none;"></div><div class="full-abs" id="blocksArea" style="display: block;"><div class="blocksAndErrorList"><div class="blocksEditorOuter"><div id="blocksEditor"><div class="injectionDiv pxt-renderer classic-theme" tabindex="0" aria-label="Blockly Workspace" dir="LTR"><div layout="v" class="blocklyToolboxDiv blocklyNonSelectable" dir="LTR" style="left: 0px; height: 100%;"><div class="blocklyToolbox"><div style="" class="pxtToolbox coloredToolbox" id="blocksEditorToolbox"><style>span.docs.inlineblock.basic {
+                    background-color: #1E90FF;
+                    border-color: #1b82e6;
+                }span.docs.inlineblock.input {
+                    background-color: #D400D4;
+                    border-color: #bf00bf;
+                }span.docs.inlineblock.input {
+                    background-color: #D400D4;
+                    border-color: #bf00bf;
+                }span.docs.inlineblock.music {
+                    background-color: #E63022;
+                    border-color: #cf2b1f;
+                }span.docs.inlineblock.led {
+                    background-color: #5C2D91;
+                    border-color: #532983;
+                }span.docs.inlineblock.led {
+                    background-color: #5C2D91;
+                    border-color: #532983;
+                }span.docs.inlineblock.radio {
+                    background-color: #E3008C;
+                    border-color: #cc007e;
+                }span.docs.inlineblock.radio {
+                    background-color: #E3008C;
+                    border-color: #cc007e;
+                }span.docs.inlineblock.loops {
+                    background-color: #00AA00;
+                    border-color: #009900;
+                }span.docs.inlineblock.logic {
+                    background-color: #00A4A6;
+                    border-color: #009495;
+                }span.docs.inlineblock.variables {
+                    background-color: #DC143C;
+                    border-color: #c61236;
+                }span.docs.inlineblock.math {
+                    background-color: #9400D3;
+                    border-color: #8500be;
+                }span.docs.inlineblock.addpackage {
+                    background-color: #717171;
+                    border-color: #666666;
+                }span.docs.inlineblock.functions {
+                    background-color: #3455DB;
+                    border-color: #2f4dc5;
+                }span.docs.inlineblock.arrays {
+                    background-color: #E65722;
+                    border-color: #cf4e1f;
+                }span.docs.inlineblock.text {
+                    background-color: #B8860B;
+                    border-color: #a6790a;
+                }span.docs.inlineblock.game {
+                    background-color: #007A4B;
+                    border-color: #006e44;
+                }span.docs.inlineblock.game {
+                    background-color: #007A4B;
+                    border-color: #006e44;
+                }span.docs.inlineblock.images {
+                    background-color: #7600A8;
+                    border-color: #6a0097;
+                }span.docs.inlineblock.pins {
+                    background-color: #B22222;
+                    border-color: #a01f1f;
+                }span.docs.inlineblock.pins {
+                    background-color: #B22222;
+                    border-color: #a01f1f;
+                }span.docs.inlineblock.serial {
+                    background-color: #002050;
+                    border-color: #001d48;
+                }span.docs.inlineblock.serial {
+                    background-color: #002050;
+                    border-color: #001d48;
+                }span.docs.inlineblock.control {
+                    background-color: #333333;
+                    border-color: #2e2e2e;
+                }span.docs.inlineblock.control {
+                    background-color: #333333;
+                    border-color: #2e2e2e;
+                }</style><div id="blocklySearchArea"><div id="blocklySearchInput" class="ui fluid icon input" role="search"><input type="text" placeholder="Search..." id="blocklySearchInputField" class="blocklySearchInputField" aria-label="Search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"><i class="search icon" role="presentation" aria-hidden="true"></i><div class="accessible-hidden" id="blocklySearchLabel" aria-live="polite">  </div></div></div><div class="blocklyTreeRoot"><div role="tree"><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="basic" aria-label="Toggle category Basic" aria-expanded="false" style="padding-left: 0px; color: rgb(30, 144, 255); border-left: 8px solid rgb(30, 144, 255);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconbasic " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">Basic</span></div><div></div></div><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="input" aria-label="Toggle category Input" aria-expanded="false" style="padding-left: 0px; color: rgb(212, 0, 212); border-left: 8px solid rgb(212, 0, 212);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconinput " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">Input</span></div><div role="tree" style="background-position: 0px 0px; display: none;"><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="input" aria-label="Toggle category more" aria-expanded="false" style="padding-left: 0px; color: rgb(212, 0, 212); border-left: 8px solid rgb(212, 0, 212);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconmore " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">more</span></div><div></div></div></div></div><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="music" aria-label="Toggle category Music" aria-expanded="false" style="padding-left: 0px; color: rgb(230, 48, 34); border-left: 8px solid rgb(230, 48, 34);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconmusic " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">Music</span></div><div></div></div><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="led" aria-label="Toggle category Led" aria-expanded="false" style="padding-left: 0px; color: rgb(92, 45, 145); border-left: 8px solid rgb(92, 45, 145);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconled " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">Led</span></div><div role="tree" style="background-position: 0px 0px; display: none;"><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="led" aria-label="Toggle category more" aria-expanded="false" style="padding-left: 0px; color: rgb(92, 45, 145); border-left: 8px solid rgb(92, 45, 145);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconmore " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">more</span></div><div></div></div></div></div><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="radio" aria-label="Toggle category Radio" aria-expanded="false" style="padding-left: 0px; color: rgb(227, 0, 140); border-left: 8px solid rgb(227, 0, 140);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconradio " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">Radio</span></div><div role="tree" style="background-position: 0px 0px; display: none;"><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="radio" aria-label="Toggle category more" aria-expanded="false" style="padding-left: 0px; color: rgb(227, 0, 140); border-left: 8px solid rgb(227, 0, 140);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconmore " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">more</span></div><div></div></div></div></div><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="loops" aria-label="Toggle category Loops" aria-expanded="false" style="padding-left: 0px; color: rgb(0, 170, 0); border-left: 8px solid rgb(0, 170, 0);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconloops " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">Loops</span></div><div></div></div><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="logic" aria-label="Toggle category Logic" aria-expanded="false" style="padding-left: 0px; color: rgb(0, 164, 166); border-left: 8px solid rgb(0, 164, 166);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconlogic " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">Logic</span></div><div></div></div><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="variables" aria-label="Toggle category Variables" aria-expanded="false" style="padding-left: 0px; color: rgb(220, 20, 60); border-left: 8px solid rgb(220, 20, 60);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconvariables " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">Variables</span></div><div></div></div><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="Math" aria-label="Toggle category Math" aria-expanded="false" style="padding-left: 0px; color: rgb(148, 0, 211); border-left: 8px solid rgb(148, 0, 211);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconmath " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">Math</span></div><div></div></div><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="addpackage" aria-label="Toggle category Extensions" aria-expanded="false" style="padding-left: 0px; color: rgb(113, 113, 113); border-left: 8px solid rgb(113, 113, 113);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIconaddpackage " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">Extensions</span></div><div></div></div><div role="treeitem"><div class="blocklyTreeSeparator"><span role="presentation" style="display: inline-block;"></span></div></div><div role="treeitem"><div role="button" class="blocklyTreeRow" tabindex="0" data-ns="advancedcollapsed" aria-label="Toggle category Advanced" style="padding-left: 0px; color: rgb(0, 39, 43); border-left: 8px solid rgb(0, 39, 43);"><span class="blocklyTreeIcon" role="presentation"></span><span class="blocklyTreeIcon blocklyTreeIcon " role="presentation" style="display: inline-block;"></span><span class="blocklyTreeLabel">Advanced</span></div><div></div></div></div></div></div><div id="debuggerToolbox"><div></div></div></div></div><div class="blockly-ws-search" style="display: none; right: 0px; top: 0px;"><div class="blockly-ws-search-container"><div class="blockly-ws-search-content"><div class="blockly-ws-search-input"><input type="text" placeholder="Search"></div><div class="blockly-ws-search-actions"><button class="blockly-ws-search-next-btn" aria-label="Find next"></button><button class="blockly-ws-search-previous-btn" aria-label="Find previous"></button></div></div><button class="blockly-ws-search-close-btn" aria-label="Close search bar"></button></div></div><svg xmlns="http://www.w3.org/2000/svg" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="blocklySvg" tabindex="0" width="1389px" height="670px" style="display: block;"><defs><pattern id="blocklyGridPattern11781913568536129" patternUnits="userSpaceOnUse" width="40.5" height="40.5" x="210" y="10"><line stroke="rgba(189, 195, 199, 0.30)" stroke-width="0.9" x1="17.1" y1="20.25" x2="23.400000000000002" y2="20.25"></line><line stroke="rgba(189, 195, 199, 0.30)" stroke-width="0.9" x1="20.25" y1="17.1" x2="20.25" y2="23.400000000000002"></line></pattern></defs><g class="blocklyWorkspace"><rect height="100%" width="100%" class="blocklyMainBackground" style="fill: url(&quot;#blocklyGridPattern11781913568536129&quot;);"></rect><g class="blocklyBlockCanvas" transform="translate(210,10) scale(0.9)"><g class="blocklyCursor"><g width="80" height="5"><rect width="80" height="5" style="display: none"><animate attributeType="XML" attributeName="fill" dur="1s" values="#ffa200;transparent;transparent;" repeatCount="indefinite"></animate></rect><rect class="blocklyVerticalMarker" rx="10" ry="10" style="display: none"></rect><path transform="" style="display: none"><animate attributeType="XML" attributeName="fill" dur="1s" values="#ffa200;transparent;transparent;" repeatCount="indefinite"></animate></path><path transform="" style="display: none" fill="none" stroke-width="4"><animate attributeType="XML" attributeName="stroke" dur="1s" values="#ffa200;transparent;transparent;" repeatCount="indefinite"></animate></path><circle r="5" style="display: none" stroke-width="4"><animate attributeType="XML" attributeName="fill" dur="1s" values="#ffa200;transparent;transparent;" repeatCount="indefinite"></animate></circle></g></g><g data-id="|#Jc[,9b-t{-+kf0/K$B" class="blocklyDraggable" transform="translate(0,0)"><path class="blocklyPath blocklyBlockBackground" stroke="#9f009f" fill="#d400d4" d=" m 0,0  m 0,4 a 4 4 0 0,1 4,-4  h 209.546875 a 4 4 0 0,1 4,4  v 4  V 8  V 40  V 44 a 4 4 0 0,1 -4,4  H 64  c -2,0  -3,1  -4,2  l -4,4  c -1,1  -2,2  -4,2  h -12  c -2,0  -3,-1  -4,-2  l -4,-4  c -1,-1  -2,-2  -4,-2  h -8 a 4 4 0 0,0 -4,4  v 217 a 4 4 0 0,0 4,4  h 8  c 2,0  3,1  4,2  l 4,4  c 1,1  2,2  4,2  h 12  c 2,0  3,-1  4,-2  l 4,-4  c 1,-1  2,-2  4,-2  H 213.546875 a 4 4 0 0,1 4,4  V 281  V 301 a 4 4 0 0,1 -4,4  h -209.546875 a 4 4 0 0,1 -4,-4 z
+"></path><g data-id="KIu)dmFy-$D`jwT[N_Km" class="blocklyDraggable" style="display: block;" transform="translate(16,48)"><path class="blocklyPath blocklyBlockBackground" stroke="#176cbf" fill="#1e90ff" d=" m 0,0  m 0,4 a 4 4 0 0,1 4,-4  h 8  c 2,0  3,1  4,2  l 4,4  c 1,1  2,2  4,2  h 12  c 2,0  3,-1  4,-2  l 4,-4  c 1,-1  2,-2  4,-2  h 124 a 4 4 0 0,1 4,4  v 8  V 40  V 48  V 217  V 221  V 221 a 4 4 0 0,1 -4,4  h -124  c -2,0  -3,1  -4,2  l -4,4  c -1,1  -2,2  -4,2  h -12  c -2,0  -3,-1  -4,-2  l -4,-4  c -1,-1  -2,-2  -4,-2  h -8 a 4 4 0 0,1 -4,-4 z
+"></path><g transform="translate(8,14.5)"><text class="blocklyText" dominant-baseline="central" x="0" y="9.5">show&nbsp;leds</text></g><g class="blocklyEditableText" transform="translate(8,48)"><svg xmlns="http://www.w3.org/2000/svg" id="field-matrix"><g transform="translate(7 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(7 35)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="1" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(7 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(7 95)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="3" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(7 125)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="4" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(39 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="1" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(39 35)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="1" data-y="1" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(39 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="1" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(39 95)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="1" data-y="3" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(39 125)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="1" data-y="4" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(71 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="2" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(71 35)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="2" data-y="1" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(71 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="2" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(71 95)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="2" data-y="3" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(71 125)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="2" data-y="4" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(103 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="3" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(103 35)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="3" data-y="1" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(103 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="3" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(103 95)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="3" data-y="3" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(103 125)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="3" data-y="4" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(135 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 35)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="1" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 95)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="3" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 125)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="4" rx="5" fill-opacity="0.2"></rect></g></svg><text class="blocklyText" dominant-baseline="central"></text></g></g><g transform="translate(8,14.5)"><text class="blocklyText" dominant-baseline="central" x="0" y="9.5">on&nbsp;button</text></g><g data-argument-type="dropdown" transform="translate(95.171875,8)"><rect rx="4" ry="4" x="0" y="0" height="32" width="44.796875" class="blocklyFieldRect blocklyDropdownRect" stroke="#9f009f" fill="transparent"></rect><text class="blocklyText blocklyDropdownText" dominant-baseline="central" text-anchor="start" x="8" y="16">A</text><image style="display: none;"></image><use height="12px" width="12px" xlink:href="#blocklyDropdownArrowSvgundefined" transform="translate(24.796875,10)"></use></g><g transform="translate(147.96875,14.5)"><text class="blocklyText" dominant-baseline="central" x="0" y="9.5">pressed</text></g></g><g data-id="H}H+{c:Mz7v*W;K%}*F)" class="blocklyDraggable" transform="translate(25,374)"><path class="blocklyPath blocklyBlockBackground" stroke="#9f009f" fill="#d400d4" d=" m 0,0  m 0,4 a 4 4 0 0,1 4,-4  h 209.546875 a 4 4 0 0,1 4,4  v 4  V 8  V 40  V 44 a 4 4 0 0,1 -4,4  H 64  c -2,0  -3,1  -4,2  l -4,4  c -1,1  -2,2  -4,2  h -12  c -2,0  -3,-1  -4,-2  l -4,-4  c -1,-1  -2,-2  -4,-2  h -8 a 4 4 0 0,0 -4,4  v 217 a 4 4 0 0,0 4,4  h 8  c 2,0  3,1  4,2  l 4,4  c 1,1  2,2  4,2  h 12  c 2,0  3,-1  4,-2  l 4,-4  c 1,-1  2,-2  4,-2  H 213.546875 a 4 4 0 0,1 4,4  V 281  V 301 a 4 4 0 0,1 -4,4  h -209.546875 a 4 4 0 0,1 -4,-4 z
+"></path><g data-id="hyC3XyGeD4DEGCw.!{yH" class="blocklyDraggable" style="display: block;" transform="translate(16,48)"><path class="blocklyPath blocklyBlockBackground" stroke="#176cbf" fill="#1e90ff" d=" m 0,0  m 0,4 a 4 4 0 0,1 4,-4  h 8  c 2,0  3,1  4,2  l 4,4  c 1,1  2,2  4,2  h 12  c 2,0  3,-1  4,-2  l 4,-4  c 1,-1  2,-2  4,-2  h 124 a 4 4 0 0,1 4,4  v 8  V 40  V 48  V 217  V 221  V 221 a 4 4 0 0,1 -4,4  h -124  c -2,0  -3,1  -4,2  l -4,4  c -1,1  -2,2  -4,2  h -12  c -2,0  -3,-1  -4,-2  l -4,-4  c -1,-1  -2,-2  -4,-2  h -8 a 4 4 0 0,1 -4,-4 z
+"></path><g transform="translate(8,14.5)"><text class="blocklyText" dominant-baseline="central" x="0" y="9.5">show&nbsp;leds</text></g><g class="blocklyEditableText" transform="translate(8,48)"><svg xmlns="http://www.w3.org/2000/svg" id="field-matrix"><g transform="translate(7 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(7 35)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="1" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(7 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(7 95)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="3" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(7 125)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="4" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(39 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="1" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(39 35)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="1" data-y="1" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(39 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="1" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(39 95)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="1" data-y="3" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(39 125)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="1" data-y="4" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(71 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="2" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(71 35)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="2" data-y="1" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(71 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="2" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(71 95)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="2" data-y="3" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(71 125)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="2" data-y="4" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(103 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="3" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(103 35)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="3" data-y="1" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(103 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="3" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(103 95)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="3" data-y="3" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(103 125)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="3" data-y="4" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(135 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 35)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="1" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 95)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="3" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 125)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="4" rx="5" fill-opacity="0.2"></rect></g></svg><text class="blocklyText" dominant-baseline="central"></text></g></g><g transform="translate(8,14.5)"><text class="blocklyText" dominant-baseline="central" x="0" y="9.5">on&nbsp;button</text></g><g data-argument-type="dropdown" transform="translate(95.171875,8)"><rect rx="4" ry="4" x="0" y="0" height="32" width="44.796875" class="blocklyFieldRect blocklyDropdownRect" stroke="#9f009f" fill="transparent"></rect><text class="blocklyText blocklyDropdownText" dominant-baseline="central" text-anchor="start" x="8" y="16">B</text><image style="display: none;"></image><use height="12px" width="12px" xlink:href="#blocklyDropdownArrowSvgundefined" transform="translate(24.796875,10)"></use></g><g transform="translate(147.96875,14.5)"><text class="blocklyText" dominant-baseline="central" x="0" y="9.5">pressed</text></g></g><g data-id="W!$syFfZ-q-4m{}1vkxq" class="blocklyDraggable" transform="translate(27,679)"><path class="blocklyPath blocklyBlockBackground" stroke="#9f009f" fill="#d400d4" d=" m 0,0  m 0,4 a 4 4 0 0,1 4,-4  h 227.140625 a 4 4 0 0,1 4,4  v 4  V 8  V 40  V 44 a 4 4 0 0,1 -4,4  H 64  c -2,0  -3,1  -4,2  l -4,4  c -1,1  -2,2  -4,2  h -12  c -2,0  -3,-1  -4,-2  l -4,-4  c -1,-1  -2,-2  -4,-2  h -8 a 4 4 0 0,0 -4,4  v 217 a 4 4 0 0,0 4,4  h 8  c 2,0  3,1  4,2  l 4,4  c 1,1  2,2  4,2  h 12  c 2,0  3,-1  4,-2  l 4,-4  c 1,-1  2,-2  4,-2  H 231.140625 a 4 4 0 0,1 4,4  V 281  V 301 a 4 4 0 0,1 -4,4  h -227.140625 a 4 4 0 0,1 -4,-4 z
+"></path><g data-id="o65C6nhCgCj~wGsyMWr*" class="blocklyDraggable" style="display: block;" transform="translate(16,48)"><path class="blocklyPath blocklyBlockBackground" stroke="#176cbf" fill="#1e90ff" d=" m 0,0  m 0,4 a 4 4 0 0,1 4,-4  h 8  c 2,0  3,1  4,2  l 4,4  c 1,1  2,2  4,2  h 12  c 2,0  3,-1  4,-2  l 4,-4  c 1,-1  2,-2  4,-2  h 124 a 4 4 0 0,1 4,4  v 8  V 40  V 48  V 217  V 221  V 221 a 4 4 0 0,1 -4,4  h -124  c -2,0  -3,1  -4,2  l -4,4  c -1,1  -2,2  -4,2  h -12  c -2,0  -3,-1  -4,-2  l -4,-4  c -1,-1  -2,-2  -4,-2  h -8 a 4 4 0 0,1 -4,-4 z
+"></path><g transform="translate(8,14.5)"><text class="blocklyText" dominant-baseline="central" x="0" y="9.5">show&nbsp;leds</text></g><g class="blocklyEditableText" transform="translate(8,48)"><svg xmlns="http://www.w3.org/2000/svg" id="field-matrix"><g transform="translate(7 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(7 35)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="1" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(7 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(7 95)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="3" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(7 125)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="0" data-y="4" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(39 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="1" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(39 35)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="1" data-y="1" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(39 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="1" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(39 95)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="1" data-y="3" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(39 125)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="1" data-y="4" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(71 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="2" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(71 35)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="2" data-y="1" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(71 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="2" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(71 95)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="2" data-y="3" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(71 125)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="2" data-y="4" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(103 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="3" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(103 35)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="3" data-y="1" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(103 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="3" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(103 95)"><rect class="blocklyLedOn" cursor="pointer" width="25" height="25" fill="#FFFFFF" data-x="3" data-y="3" rx="5" fill-opacity="1.0"></rect></g><g transform="translate(103 125)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="3" data-y="4" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 5)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="0" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 35)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="1" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 65)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="2" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 95)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="3" rx="5" fill-opacity="0.2"></rect></g><g transform="translate(135 125)"><rect class="blocklyLedOff" cursor="pointer" width="25" height="25" fill="#000000" data-x="4" data-y="4" rx="5" fill-opacity="0.2"></rect></g></svg><text class="blocklyText" dominant-baseline="central"></text></g></g><g transform="translate(8,14.5)"><text class="blocklyText" dominant-baseline="central" x="0" y="9.5">on&nbsp;button</text></g><g data-argument-type="dropdown" transform="translate(95.171875,8)"><rect rx="4" ry="4" x="0" y="0" height="32" width="62.390625" class="blocklyFieldRect blocklyDropdownRect" stroke="#9f009f" fill="transparent"></rect><text class="blocklyText blocklyDropdownText" dominant-baseline="central" text-anchor="start" x="8" y="16">A+B</text><image style="display: none;"></image><use height="12px" width="12px" xlink:href="#blocklyDropdownArrowSvgundefined" transform="translate(42.390625,10)"></use></g><g transform="translate(165.5625,14.5)"><text class="blocklyText" dominant-baseline="central" x="0" y="9.5">pressed</text></g></g></g><g class="blocklyBubbleCanvas" transform="translate(210,10) scale(0.9)"></g><rect height="15" width="15" class="blocklyScrollbarBackground" x="1373.5" y="654.5"></rect><defs></defs><defs></defs><defs><filter id="blocklyHighlightGlowFilterundefined" height="160%" width="180%" y="-30%" x="-40%"><fegaussianblur in="SourceGraphic" stdDeviation="1.1"></fegaussianblur><fecomponenttransfer result="outBlur"><fefunca type="table" tableValues="0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"></fefunca></fecomponenttransfer><feflood flood-color="#FFF200" flood-opacity="1" result="outColor"></feflood><fecomposite in="outColor" in2="outBlur" operator="in" result="outGlow"></fecomposite></filter><filter id="blocklyHighlightWarningFilterundefined" height="160%" width="180%" y="-30%" x="-40%"><fegaussianblur in="SourceGraphic" stdDeviation="1.1"></fegaussianblur><fecomponenttransfer result="outBlur"><fefunca type="table" tableValues="0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"></fefunca></fecomponenttransfer><feflood flood-color="#E53D00" flood-opacity="1" result="outColor"></feflood><fecomposite in="outColor" in2="outBlur" operator="in" result="outGlow"></fecomposite></filter><image id="blocklyDropdownArrowSvgundefined" height="12px" width="12px" xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMi43MSIgaGVpZ2h0PSI4Ljc5IiB2aWV3Qm94PSIwIDAgMTIuNzEgOC43OSI+PHRpdGxlPmRyb3Bkb3duLWFycm93PC90aXRsZT48ZyBvcGFjaXR5PSIwLjEiPjxwYXRoIGQ9Ik0xMi43MSwyLjQ0QTIuNDEsMi40MSwwLDAsMSwxMiw0LjE2TDguMDgsOC4wOGEyLjQ1LDIuNDUsMCwwLDEtMy40NSwwTDAuNzIsNC4xNkEyLjQyLDIuNDIsMCwwLDEsMCwyLjQ0LDIuNDgsMi40OCwwLDAsMSwuNzEuNzFDMSwwLjQ3LDEuNDMsMCw2LjM2LDBTMTEuNzUsMC40NiwxMiwuNzFBMi40NCwyLjQ0LDAsMCwxLDEyLjcxLDIuNDRaIiBmaWxsPSIjMjMxZjIwIi8+PC9nPjxwYXRoIGQ9Ik02LjM2LDcuNzlhMS40MywxLjQzLDAsMCwxLTEtLjQyTDEuNDIsMy40NWExLjQ0LDEuNDQsMCwwLDEsMC0yYzAuNTYtLjU2LDkuMzEtMC41Niw5Ljg3LDBhMS40NCwxLjQ0LDAsMCwxLDAsMkw3LjM3LDcuMzdBMS40MywxLjQzLDAsMCwxLDYuMzYsNy43OVoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="></image></defs><defs><filter id="blocklyEmbossFilter5276422355826762"><fegaussianblur in="SourceAlpha" stdDeviation="1" result="blur"></fegaussianblur><fespecularlighting in="blur" surfaceScale="1" specularConstant="0.5" specularExponent="10" lighting-color="white" result="specOut"><fepointlight x="-5000" y="-10000" z="20000"></fepointlight></fespecularlighting><fecomposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"></fecomposite><fecomposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"></fecomposite></filter><pattern id="blocklyDisabledPattern5276422355826762" patternUnits="userSpaceOnUse" width="10" height="10"><rect width="10" height="10" fill="#aaa"></rect><path d="M 0 0 L 10 10 M 10 0 L 0 10" stroke="#cc0"></path></pattern><filter id="blocklyDebugFilter5276422355826762" height="160%" width="180%" y="-30%" x="-40%"><fecomponenttransfer result="outBlur"><fefunca type="table" tableValues="0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"></fefunca></fecomponenttransfer><feflood flood-color="#ff0000" flood-opacity="0.5" result="outColor"></feflood><fecomposite in="outColor" in2="outBlur" operator="in" result="outGlow"></fecomposite></filter></defs><defs><filter id="blocklySelectedGlowFilter5276422355826762" height="160%" width="180%" y="-30%" x="-40%"><fegaussianblur in="SourceGraphic" stdDeviation="0.5"></fegaussianblur><fecomponenttransfer result="outBlur"><fefunca type="table" tableValues="0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"></fefunca></fecomponenttransfer><feflood flood-color="#fff200" flood-opacity="1" result="outColor"></feflood><fecomposite in="outColor" in2="outBlur" operator="in" result="outGlow"></fecomposite></filter><filter id="blocklyReplacementGlowFilter5276422355826762" height="160%" width="180%" y="-30%" x="-40%"><fegaussianblur in="SourceGraphic" stdDeviation="2"></fegaussianblur><fecomponenttransfer result="outBlur"><fefunca type="table" tableValues="0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"></fefunca></fecomponenttransfer><feflood flood-color="#fff200" flood-opacity="1" result="outColor"></feflood><fecomposite in="outColor" in2="outBlur" operator="in" result="outGlow"></fecomposite><fecomposite in="SourceGraphic" in2="outGlow" operator="over"></fecomposite></filter></defs><defs><filter id="blocklyHighlightGlowFilterundefined" height="160%" width="180%" y="-30%" x="-40%"><fegaussianblur in="SourceGraphic" stdDeviation="1.1"></fegaussianblur><fecomponenttransfer result="outBlur"><fefunca type="table" tableValues="0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"></fefunca></fecomponenttransfer><feflood flood-color="#FFF200" flood-opacity="1" result="outColor"></feflood><fecomposite in="outColor" in2="outBlur" operator="in" result="outGlow"></fecomposite></filter><filter id="blocklyHighlightWarningFilterundefined" height="160%" width="180%" y="-30%" x="-40%"><fegaussianblur in="SourceGraphic" stdDeviation="1.1"></fegaussianblur><fecomponenttransfer result="outBlur"><fefunca type="table" tableValues="0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"></fefunca></fecomponenttransfer><feflood flood-color="#E53D00" flood-opacity="1" result="outColor"></feflood><fecomposite in="outColor" in2="outBlur" operator="in" result="outGlow"></fecomposite></filter><image id="blocklyDropdownArrowSvgundefined" height="12px" width="12px" xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMi43MSIgaGVpZ2h0PSI4Ljc5IiB2aWV3Qm94PSIwIDAgMTIuNzEgOC43OSI+PHRpdGxlPmRyb3Bkb3duLWFycm93PC90aXRsZT48ZyBvcGFjaXR5PSIwLjEiPjxwYXRoIGQ9Ik0xMi43MSwyLjQ0QTIuNDEsMi40MSwwLDAsMSwxMiw0LjE2TDguMDgsOC4wOGEyLjQ1LDIuNDUsMCwwLDEtMy40NSwwTDAuNzIsNC4xNkEyLjQyLDIuNDIsMCwwLDEsMCwyLjQ0LDIuNDgsMi40OCwwLDAsMSwuNzEuNzFDMSwwLjQ3LDEuNDMsMCw2LjM2LDBTMTEuNzUsMC40NiwxMiwuNzFBMi40NCwyLjQ0LDAsMCwxLDEyLjcxLDIuNDRaIiBmaWxsPSIjMjMxZjIwIi8+PC9nPjxwYXRoIGQ9Ik02LjM2LDcuNzlhMS40MywxLjQzLDAsMCwxLTEtLjQyTDEuNDIsMy40NWExLjQ0LDEuNDQsMCwwLDEsMC0yYzAuNTYtLjU2LDkuMzEtMC41Niw5Ljg3LDBhMS40NCwxLjQ0LDAsMCwxLDAsMkw3LjM3LDcuMzdBMS40MywxLjQzLDAsMCwxLDYuMzYsNy43OVoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="></image></defs></g></svg><svg class="blocklyScrollbarVertical blocklyMainWorkspaceScrollbar" width="15" height="654" style="transform: translate(1373.5px, 0.5px);"><g><rect class="blocklyScrollbarBackground" width="15" height="654"></rect><rect class="blocklyScrollbarHandle" rx="5" ry="5" width="10" x="2.5" height="281.67909488300336" y="136.63538184623297"></rect></g></svg><svg class="blocklyScrollbarHorizontal blocklyMainWorkspaceScrollbar" height="15" width="1173" style="transform: translate(200.5px, 654.5px);"><g><rect class="blocklyScrollbarBackground" height="15" width="1173"></rect><rect class="blocklyScrollbarHandle" rx="5" ry="5" height="10" y="2.5" width="651.0967250626766" x="516.4272722034068"></rect></g></svg><svg class="blocklyFlyout" style="display: none"><path class="blocklyFlyoutBackground"></path><g class="blocklyWorkspace"><g class="blocklyBlockCanvas"><g class="blocklyCursor"><g width="80" height="5"><rect width="80" height="5" style="display: none"><animate attributeType="XML" attributeName="fill" dur="1s" values="#ffa200;transparent;transparent;" repeatCount="indefinite"></animate></rect><rect class="blocklyVerticalMarker" rx="10" ry="10" style="display: none"></rect><path transform="" style="display: none"><animate attributeType="XML" attributeName="fill" dur="1s" values="#ffa200;transparent;transparent;" repeatCount="indefinite"></animate></path><path transform="" style="display: none" fill="none" stroke-width="4"><animate attributeType="XML" attributeName="stroke" dur="1s" values="#ffa200;transparent;transparent;" repeatCount="indefinite"></animate></path><circle r="5" style="display: none" stroke-width="4"><animate attributeType="XML" attributeName="fill" dur="1s" values="#ffa200;transparent;transparent;" repeatCount="indefinite"></animate></circle></g></g></g><g class="blocklyBubbleCanvas"></g><defs><filter id="blocklyEmbossFilter3029390100095626"><fegaussianblur in="SourceAlpha" stdDeviation="1" result="blur"></fegaussianblur><fespecularlighting in="blur" surfaceScale="1" specularConstant="0.5" specularExponent="10" lighting-color="white" result="specOut"><fepointlight x="-5000" y="-10000" z="20000"></fepointlight></fespecularlighting><fecomposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"></fecomposite><fecomposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"></fecomposite></filter><pattern id="blocklyDisabledPattern3029390100095626" patternUnits="userSpaceOnUse" width="10" height="10"><rect width="10" height="10" fill="#aaa"></rect><path d="M 0 0 L 10 10 M 10 0 L 0 10" stroke="#cc0"></path></pattern><filter id="blocklyDebugFilter3029390100095626" height="160%" width="180%" y="-30%" x="-40%"><fecomponenttransfer result="outBlur"><fefunca type="table" tableValues="0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"></fefunca></fecomponenttransfer><feflood flood-color="#ff0000" flood-opacity="0.5" result="outColor"></feflood><fecomposite in="outColor" in2="outBlur" operator="in" result="outGlow"></fecomposite></filter></defs><defs><filter id="blocklySelectedGlowFilter3029390100095626" height="160%" width="180%" y="-30%" x="-40%"><fegaussianblur in="SourceGraphic" stdDeviation="0.5"></fegaussianblur><fecomponenttransfer result="outBlur"><fefunca type="table" tableValues="0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"></fefunca></fecomponenttransfer><feflood flood-color="#fff200" flood-opacity="1" result="outColor"></feflood><fecomposite in="outColor" in2="outBlur" operator="in" result="outGlow"></fecomposite></filter><filter id="blocklyReplacementGlowFilter3029390100095626" height="160%" width="180%" y="-30%" x="-40%"><fegaussianblur in="SourceGraphic" stdDeviation="2"></fegaussianblur><fecomponenttransfer result="outBlur"><fefunca type="table" tableValues="0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"></fefunca></fecomponenttransfer><feflood flood-color="#fff200" flood-opacity="1" result="outColor"></feflood><fecomposite in="outColor" in2="outBlur" operator="in" result="outGlow"></fecomposite><fecomposite in="SourceGraphic" in2="outGlow" operator="over"></fecomposite></filter></defs><defs><filter id="blocklyHighlightGlowFilterundefined" height="160%" width="180%" y="-30%" x="-40%"><fegaussianblur in="SourceGraphic" stdDeviation="1.1"></fegaussianblur><fecomponenttransfer result="outBlur"><fefunca type="table" tableValues="0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"></fefunca></fecomponenttransfer><feflood flood-color="#FFF200" flood-opacity="1" result="outColor"></feflood><fecomposite in="outColor" in2="outBlur" operator="in" result="outGlow"></fecomposite></filter><filter id="blocklyHighlightWarningFilterundefined" height="160%" width="180%" y="-30%" x="-40%"><fegaussianblur in="SourceGraphic" stdDeviation="1.1"></fegaussianblur><fecomponenttransfer result="outBlur"><fefunca type="table" tableValues="0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"></fefunca></fecomponenttransfer><feflood flood-color="#E53D00" flood-opacity="1" result="outColor"></feflood><fecomposite in="outColor" in2="outBlur" operator="in" result="outGlow"></fecomposite></filter><image id="blocklyDropdownArrowSvgundefined" height="12px" width="12px" xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMi43MSIgaGVpZ2h0PSI4Ljc5IiB2aWV3Qm94PSIwIDAgMTIuNzEgOC43OSI+PHRpdGxlPmRyb3Bkb3duLWFycm93PC90aXRsZT48ZyBvcGFjaXR5PSIwLjEiPjxwYXRoIGQ9Ik0xMi43MSwyLjQ0QTIuNDEsMi40MSwwLDAsMSwxMiw0LjE2TDguMDgsOC4wOGEyLjQ1LDIuNDUsMCwwLDEtMy40NSwwTDAuNzIsNC4xNkEyLjQyLDIuNDIsMCwwLDEsMCwyLjQ0LDIuNDgsMi40OCwwLDAsMSwuNzEuNzFDMSwwLjQ3LDEuNDMsMCw2LjM2LDBTMTEuNzUsMC40NiwxMiwuNzFBMi40NCwyLjQ0LDAsMCwxLDEyLjcxLDIuNDRaIiBmaWxsPSIjMjMxZjIwIi8+PC9nPjxwYXRoIGQ9Ik02LjM2LDcuNzlhMS40MywxLjQzLDAsMCwxLTEtLjQyTDEuNDIsMy40NWExLjQ0LDEuNDQsMCwwLDEsMC0yYzAuNTYtLjU2LDkuMzEtMC41Niw5Ljg3LDBhMS40NCwxLjQ0LDAsMCwxLDAsMkw3LjM3LDcuMzdBMS40MywxLjQzLDAsMCwxLDYuMzYsNy43OVoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="></image></defs></g></svg><svg class="blocklyScrollbarVertical blocklyFlyoutScrollbar" width="15"><g><rect class="blocklyScrollbarBackground" width="15"></rect><rect class="blocklyScrollbarHandle" rx="5" ry="5" width="10" x="2.5"></rect></g></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="blocklyBlockDragSurface"><g transform="translate(210,10) scale(0.9)"></g></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="blocklyWsDragSurface blocklyOverflowVisible"></svg></div></div><div id="blocklyTrashIcon" style="opacity: 0; display: none;"><i class="trash icon" aria-hidden="true"></i></div></div></div></div><div class="full-abs" id="serialEditor" style="display: none;"><div id="serialArea" class="no-toggle hide-view-latest"><div id="serialHeader" class="ui serialHeader"><div class="leftHeaderWrapper"><div class="leftHeader"><button class="ui button   " title="Go back" tabindex="0"><i class="icon arrow left " aria-hidden="true" role="presentation"></i><span class="ui text landscape only">Go back</span></button><div class="common-editor-toggle-outer"><div id="serial-editor-toggle" class="common-toggle-accessibility" role="tablist"><button id="serial-editor-toggle-selected" class="common-button selected" title="Console" role="tab" tabindex="0" aria-selected="true" data-isfocusable="true"><span class="common-button-flex"><span class="common-button-label">Console</span></span></button><button class="common-button" title="Data Log" role="tab" tabindex="-1" data-isfocusable="true"><span class="common-button-flex"><span class="common-button-label">Data Log</span></span></button></div><div id="serial-editor-toggle" class="common-editor-toggle slim tablet-compact" role="tablist" aria-hidden="true"><div class="common-editor-toggle-item selected"><button class="common-button" title="Console" role="tab" tabindex="-1" aria-hidden="true"><span class="common-button-flex"><i class="fas fa-terminal" aria-hidden="true"></i><span class="common-button-label">Console</span></span></button></div><div class="common-editor-toggle-item"><button class="common-button" title="Data Log" role="tab" tabindex="-1" aria-hidden="true"><span class="common-button-flex"><i class="fas fa-table" aria-hidden="true"></i><span class="common-button-label">Data Log</span></span></button></div><div class="common-editor-toggle-handle" aria-hidden="true"></div></div></div></div></div><div class="rightHeader"><button class="ui button   ui icon button editorExport csv-hide" title="Save raw text" tabindex="0" aria-label="Save raw text"><i class="icon copy " aria-hidden="true" role="presentation"></i></button><button class="ui button   ui icon blue button editorExport" title="Export data" tabindex="0" aria-label="Export data"><i class="icon download " aria-hidden="true" role="presentation"></i></button><button class="ui button   ui left floated icon button red circular toggleRecord csv-hide" title="Start recording" tabindex="0"><i class="icon circle icon " aria-hidden="true" role="presentation"></i></button><span class="ui small header">Simulator</span></div></div><div id="serialPlaceholder" class="ui segment"><div class="ui bottom left attached no-select label seriallabel">Values will be logged when the simulator sends data</div></div><div id="serialCharts" class="noconsole nochart"></div><div id="serialConsole" class="noconsole nochart"></div><div id="serialCsv"></div><button class="ui button   " id="serialCsvViewLatest" tabindex="0">View latest row...</button></div></div><div class="full-abs" id="assetEditor" style="display: none;"><div class="asset-editor-outer"><div class="asset-editor-sidebar"><div class="common-list asset-editor-sidebar-info"><div class="common-list-item"><div>Asset Preview</div></div><div class="common-list-item"><div class="asset-editor-sidebar-preview"></div></div><div class="common-list-item"><div class="asset-editor-sidebar-name">No asset selected</div></div></div><div class="common-list asset-editor-sidebar-controls"><div class="common-list-item"></div><div class="common-list-item"></div><div class="common-list-item"></div><div class="common-list-item"></div><div class="common-list-item"><button class="common-button teal asset-palette-button" title="Open the color palette" role="button" tabindex="0" aria-label="Open the color palette"><span class="common-button-flex"><i class="fas fa-palette" aria-hidden="true"></i><span class="common-button-label">Colors</span></span></button></div></div><textarea class="asset-editor-sidebar-copy"></textarea></div><div class="asset-editor-gallery"><div class="asset-editor-topbar"><div class="asset-editor-gallery-tab selected" role="navigation">My Assets</div><div class="asset-editor-gallery-tab " role="navigation">Gallery</div></div><div class="asset-editor-card-list "><div><button class="common-button create-new inverted" title="Create a new asset" role="button" tabindex="0" aria-label="Create a new asset"><span class="common-button-flex"><i class="icon huge add circle" aria-hidden="true"></i><span class="common-button-label"></span></span></button></div></div><div class="asset-editor-card-list hidden"><div></div></div></div></div></div><div class="full-abs" id="monacoEditor" style="display: none;"><div id="monacoEditorArea" class="monacoEditorArea " style="direction: ltr;"><div id="monacoEditorRightArea" class="monacoEditorRightArea"><div id="monacoEditorInner"><div id="monacoFlyoutWidget" class="monacoFlyout" style="display: none;"><div id="monacoFlyoutWrapper" role="list"><div class="monacoFlyoutLabel monacoFlyoutHeading"><span class="monacoFlyoutHeadingIcon blocklyTreeIcon blocklyTreeIconDefault" role="presentation" style="color: rgb(109, 91, 165);"></span><div class="monacoFlyoutLabelText">undefined</div></div></div></div></div><div class="errorList errorListSummary " hidden=""><div class="errorListHeader" role="button" aria-label="Expand error list" tabindex="0"><h4>Problems</h4><div class="ui red circular label countBubble">0</div><div class="toggleButton"><i class="icon chevron up " aria-hidden="true" role="presentation"></i></div></div></div></div></div></div></div><div id="editortools" class="ui" role="region" aria-label="Editor toolbar"><div id="downloadArea" role="menu" class="ui column items"><div class="ui item portrait hide"><button class="ui button icon icon-and-text  primary download-button left attached connected large fluid " role="menuitem" title="Download your code to the micro:bit" tabindex="0"><i class="icon xicon microbit icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Download</span></button><div role="menuitem" title="Download options" aria-haspopup="false" class="ui dropdown icon large right attached editortools-btn hw-button button menuAbove" data-tooltip="Connected to micro:bit" tabindex="0"><i class="icon ellipsis horizontal large " aria-hidden="true" role="presentation"></i><div role="menu" aria-label="Dropdown menu Download options" aria-hidden="false" class="menu"><div class="ui item link    " role="menuitem" aria-label="Disconnect" title="Disconnect" tabindex="-1"><i class="icon xicon microbit icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Disconnect</span></div><div class="ui item link    " role="menuitem" aria-label="Download as File" title="Download as File" tabindex="-1"><i class="icon xicon file-download icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Download as File</span></div><div class="ui item link    " role="menuitem" aria-label="Help" title="Help" tabindex="-1"><i class="icon help circle icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Help</span></div></div></div></div><div class="ui portrait only"><button class="ui button icon  primary download-button left attached connected download-button-full " role="menuitem" title="Download your code to the micro:bit" tabindex="0"><i class="icon xicon microbit " aria-hidden="true" role="presentation"></i></button><div role="menuitem" title="Download options" aria-haspopup="false" class="ui dropdown icon  right attached editortools-btn hw-button button menuAbove menuRight" data-tooltip="Connected to micro:bit" tabindex="0"><i class="icon ellipsis horizontal  " aria-hidden="true" role="presentation"></i><div role="menu" aria-label="Dropdown menu Download options" aria-hidden="false" class="menu"><div class="ui item link    " role="menuitem" aria-label="Disconnect" title="Disconnect" tabindex="-1"><i class="icon xicon microbit icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Disconnect</span></div><div class="ui item link    " role="menuitem" aria-label="Download" title="Download" tabindex="-1"><i class="icon xicon file-download icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Download</span></div><div class="ui item link    " role="menuitem" aria-label="Help" title="Help" tabindex="-1"><i class="icon help circle icon-and-text  " aria-hidden="true" role="presentation"></i><span class="ui text">Help</span></div></div></div></div></div><div id="projectNameArea" role="menu" class="ui column items"><div class="ui right  input projectname-input projectname-computer"><label for="fileNameInput2" class="accessible-hidden phone hide">Type a name for your project</label><input class="mobile hide ui" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="fileNameInput2" type="text" aria-labelledby="fileNameInput2" placeholder="Pick a name..." value="smaile"><div role="button" class="ui icon button editortools-btn editortools-github-btn
+            " title="smaile: review, commit &amp; push local changes to GitHub." tabindex="0"><i class="github icon"></i><span class="ui mobile hide"></span><span class="ui long mobile hide"><i class="arrow alternate up icon"></i></span></div><div class="cloudstatusarea"><div class="ui item link   ui tiny cloudicon xicon cloud-saved-b " aria-label="Project saved to cloud" title="Project saved to cloud" tabindex="-1"></div></div></div></div><div id="editorToolbarArea" role="menu" class="ui column items"><div class="ui icon buttons"><button class="ui button icon  editortools-btn undo-editortools-btn " role="menuitem" title="Undo" tabindex="0" aria-label="Undo, "><i class="icon xicon undo " aria-hidden="true" role="presentation"></i></button><button class="ui button icon  editortools-btn redo-editortools-btn disabled" role="menuitem" title="Redo" tabindex="0" aria-label="Redo, Disabled"><i class="icon xicon redo " aria-hidden="true" role="presentation"></i></button></div><div class="ui icon buttons mobile hide"><button class="ui button icon  editortools-btn zoomout-editortools-btn" role="menuitem" title="Zoom Out" tabindex="0"><i class="icon minus circle " aria-hidden="true" role="presentation"></i></button><button class="ui button icon  editortools-btn zoomin-editortools-btn" role="menuitem" title="Zoom In" tabindex="0"><i class="icon plus circle " aria-hidden="true" role="presentation"></i></button></div></div></div><div></div><div></div></div><div><div></div></div></div>
+        </div>
+    </div>
+
+    <div id="msg" aria-live="polite">
+        <div id="errmsg" class="ui red inverted segment"></div>
+        <div id="warnmsg" class="ui orange inverted segment"></div>
+        <div id="infomsg" class="ui teal inverted segment"></div>
+        <div id="compilemsg" class="ui ignored info message"></div>
+    </div>
+
+    <script>
+        // This line gets patched up by the cloud
+        var pxtConfig = {
+    "relprefix": "/---",
+    "verprefix": "",
+    "workerjs": "/---worker",
+    "tdworkerjs": "/---tdworker",
+    "monacoworkerjs": "/---monacoworker",
+    "gifworkerjs": "/---gifworker",
+    "serviceworkerjs": "/---serviceworker",
+    "typeScriptWorkerJs": "/---tsworker",
+    "pxtVersion": "?",
+    "pxtRelId": "792c353d005b5c423d9f5d28775b85031a458feb",
+    "pxtCdnUrl": "https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/",
+    "commitCdnUrl": "https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/",
+    "blobCdnUrl": "https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/",
+    "targetUrl": "https://makecode.microbit.org",
+    "targetVersion": "?",
+    "targetRelId": "792c353d005b5c423d9f5d28775b85031a458feb",
+    "targetCdnUrl": "https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/",
+    "targetId": "microbit",
+    "runUrl": "/---run",
+    "docsUrl": "/---docs",
+    "multiUrl": "/---multi",
+    "asseteditorUrl": "/---asseteditor",
+    "skillmapUrl": "/---skillmap",
+    "authcodeUrl": "/---authcode",
+    "multiplayerUrl": "/---multiplayer",
+    "kioskUrl": "/---kiosk",
+    "teacherToolUrl": "/---eval",
+    "partsUrl": "https://trg-microbit.userpxt.io/---siminstructions",
+    "simUrl": "https://trg-microbit.userpxt.io/---simulator",
+    "simserviceworkerUrl": "https://trg-microbit.userpxt.io/---simserviceworker",
+    "simworkerconfigUrl": "https://trg-microbit.userpxt.io/---simworkerconfig",
+    "cdnUrl": "https://pxt.azureedge.net"
+};
+    </script>
+    
+<!-- include apptrackingweb.html -->
+<script type="text/javascript" src="./smile_files/pxtweb.js.download"></script>
+<!-- begin usabilla live embed code -->
+<script type="text/javascript">window.lightningjs||function(n){var e="lightningjs";function t(e,t){var r,i,a,o,d,c;return t&&(t+=(/\?/.test(t)?"&":"?")+"lv=1"),n[e]||(r=window,i=document,a=e,o=i.location.protocol,d="load",c=0,function(){n[a]=function(){var t=arguments,i=this,o=++c,d=i&&i!=r&&i.id||0;function s(){return s.id=o,n[a].apply(s,arguments)}return(e.s=e.s||[]).push([o,d,t]),s.then=function(n,t,r){var i=e.fh[o]=e.fh[o]||[],a=e.eh[o]=e.eh[o]||[],d=e.ph[o]=e.ph[o]||[];return n&&i.push(n),t&&a.push(t),r&&d.push(r),s},s};var e=n[a]._={};function s(){e.P(d),e.w=1,n[a]("_load")}e.fh={},e.eh={},e.ph={},e.l=t?t.replace(/^\/\//,("https:"==o?o:"http:")+"//"):t,e.p={0:+new Date},e.P=function(n){e.p[n]=new Date-e.p[0]},e.w&&s(),r.addEventListener?r.addEventListener(d,s,!1):r.attachEvent("onload",s);var l=function(){function n(){return["<!DOCTYPE ",o,"><",o,"><head></head><",t,"><",r,' src="',e.l,'"></',r,"></",t,"></",o,">"].join("")}var t="body",r="script",o="html",d=i[t];if(!d)return setTimeout(l,100);e.P(1);var c,s=i.createElement("div"),h=s.appendChild(i.createElement("div")),u=i.createElement("iframe");s.style.display="none",d.insertBefore(s,d.firstChild).id="lightningjs-"+a,u.frameBorder="0",u.id="lightningjs-frame-"+a,/MSIE[ ]+6/.test(navigator.userAgent)&&(u.src="javascript:false"),u.allowTransparency="true",h.appendChild(u);try{u.contentWindow.document.open()}catch(n){e.domain=i.domain,c="javascript:var d=document.open();d.domain='"+i.domain+"';",u.src=c+"void(0);"}try{var p=u.contentWindow.document;p.write(n()),p.close()}catch(e){u.src=c+'d.write("'+n().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}e.P(2)};e.l&&l()}()),n[e].lv="1",n[e]}var r=window.lightningjs=t(e);r.require=t,r.modules=n}({});window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/fe98398a199e.js");</script>
+<!-- end usabilla live embed code -->
+
+<script type="text/javascript">
+window.addEventListener("DOMContentLoaded", () => {
+    let hidden = false;
+    
+    // Observe the rootdir to see if we are in the homescreen or not. If
+    // we leave the home screen, hide the usabilla overlay
+    const observer = new MutationObserver((mutationList) => {
+        for (const mutation of mutationList) {
+            if (mutation.type === "attributes") {
+                const root = document.getElementById("root");
+
+                if (root.classList.contains("inHome")) {
+                    if (hidden) {
+                        hidden = false;
+                        const el = document.querySelector("div.usabilla__overlay");
+                        if (el) el.style.display = "";
+                    }
+                }
+                else if (!hidden) {
+                    hidden = true;
+                    const el = document.querySelector("div.usabilla__overlay");
+                    if (el) el.style.display = "none";
+                }
+            }
+        }
+    });
+
+    // Just poll until react has had time to render the root div
+    let interval = setInterval(() => {
+        const root = document.getElementById("root");
+
+        if (root) {
+            clearInterval(interval);
+            observer.observe(root, { attributes: true, attributeFilter: ["class"] });
+        }
+    }, 500);
+});
+</script>
+<!-- end include apptrackingweb.html -->
+
+    
+<!-- include apptracking.html -->
+<script type="text/javascript">
+    window.loadAppInsights = function (includeCookie, telemetryInitializer) {
+        //Backend will patch / + blb + / with CDN url and the check that URL ends with the sha would pass
+        var isProduction = includeCookie && (/[0-9a-f]{40}\/$/.test("https://pxt.azureedge.net/commit/792c353d005b5c423d9f5d28775b85031a458feb/"));
+        !function(T,l,y){var S=T.location,k="script",D="connectionString",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
+            src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", // The SDK URL Source
+            onInit: function (sdk) {
+                sdk.addTelemetryInitializer(telemetryInitializer);
+            },
+            cfg: {
+                instrumentationKey:"9801ed01-c40f-46ec-aa40-2a1742a9e71c",
+                disableAjaxTracking: true,
+                overridePageViewDuration: false,
+                disableExceptionTracking: true,
+                disableCookiesUsage: !isProduction,
+                isStorageUseDisabled: !isProduction,
+                url: "https://pxt.azureedge.net/blob/7e4e12cc09bf57abd183e4b24cd7303f369c2ca6/ai.2.min.js"
+            }
+        });
+        window.appInsights=appInsights;
+
+        var location = window.location.toString();
+        appInsights.trackPageView({
+            name: window.location.hostname,
+            uri: window.location.origin,
+            properties: {
+                url: scrubUrl(location),
+                urlReferrer: scrubUrl(document.referrer.toString())
+            }
+        });
+
+        // Scrub potential PII from the URL.
+        function scrubUrl(url) {
+            if (!url) return url;
+
+            var scriptIdRegex = /(?:S?\d{5}-\d{5}-\d{5}-\d{5})|(?:_[0-9a-zA-Z]{12})/g;
+            var scrubbedUrl = new URL(url.toLocaleLowerCase().replace(scriptIdRegex, "xxxxx-xxxxx-xxxxx-xxxxx"));
+
+            // Just as a precaution, strip any suspicious query parameters.
+            var blockedParamKeywords = ["username", "password", "token", "pwd"];
+            var searchParams = Array.from(scrubbedUrl.searchParams.keys());
+            for (var param of searchParams) {
+                if (blockedParamKeywords.some(k => param.indexOf(k) != -1)) {
+                    scrubbedUrl.searchParams.delete(param);
+                }
+            }
+
+            return scrubbedUrl.toString();
+        }
+
+        return isProduction;
+    }
+    pxt.initAnalyticsAsync();
+</script>
+<!-- end include apptracking.html -->
+
+    <script type="text/javascript" src="./smile_files/pxtapp.js.download"></script>
+    <script type="text/javascript" src="./smile_files/target.js.download"></script>
+    <script id="mainscript" type="text/javascript" src="./smile_files/main.js.download"></script>
+    <xml id="blocklyToolboxDefinitionCategory" style="display: none">
+        <!-- An empty category is required so that Blockly launches in category mode -->
+        <category name="">
+        </category>
+    </xml>
+    <xml id="blocklyToolboxDefinitionFlyout" style="display: none">
+    </xml>
+    <script>
+        // Before loading vs/editor/editor.main, define a global MonacoEnvironment that overwrites
+        // the default worker url location (used when creating WebWorkers). The problem here is that
+        // HTML5 does not (yet) allow cross-domain web workers, so we need to proxy the instantion of
+        // a web worker through a same-domain script
+        window.MonacoEnvironment = {
+            getWorkerUrl: function(workerId, label) {
+                return pxt.webConfig.monacoworkerjs;
+            }
+        };
+
+        // this get rewritten to blob URLs with SHAs while uploading to the cloud
+        // keep in sync with release.manifest and asseteditor.html
+        window.MonacoPaths = {
+            "vs/loader": "https://pxt.azureedge.net/blob/17e4c591ec47474f1e488f733acd77a1a528378d/vs/loader.js",
+            "vs/base/worker/workerMain": "https://pxt.azureedge.net/blob/3edf5cb4f608aeb07473c5d7c333400e7e469dc0/vs/base/worker/workerMain.js",
+            "vs/basic-languages/bat/bat": "https://pxt.azureedge.net/blob/c67b89bea8ad93bb58cd7686e001daa07e326c21/vs/basic-languages/bat/bat.js",
+            "vs/basic-languages/cpp/cpp": "https://pxt.azureedge.net/blob/8743140f1aa68071ddaf925c836b045e1389bde8/vs/basic-languages/cpp/cpp.js",
+            "vs/basic-languages/markdown/markdown": "https://pxt.azureedge.net/blob/e0cd73549d298474237961881b00500dbbad8638/vs/basic-languages/markdown/markdown.js",
+            "vs/basic-languages/python/python": "https://pxt.azureedge.net/blob/e5e8a27fe42b8bd8079a5e770ed04a840f84832c/vs/basic-languages/python/python.js",
+            "vs/basic-languages/typescript/typescript": "https://pxt.azureedge.net/blob/196f8e01f9716dee9f6da8fb53993c6100914d5f/vs/basic-languages/typescript/typescript.js",
+            "vs/editor/editor.main.css": "https://pxt.azureedge.net/blob/88b279a451119201c6d16bf4a7ca982d3a2727d8/vs/editor/editor.main.css",
+            "vs/editor/editor.main": "https://pxt.azureedge.net/blob/4d38796d4c9d7dae8546930fcae73edcbdbb1a52/vs/editor/editor.main.js",
+            "vs/editor/editor.main.nls": "https://pxt.azureedge.net/blob/23ec988172113c78c24a7ed994c4628fb1a9fd32/vs/editor/editor.main.nls.js",
+            "vs/language/json/jsonMode": "https://pxt.azureedge.net/blob/dfbe96a2b954d99771af6b680a09858c683ba123/vs/language/json/jsonMode.js",
+            "vs/language/json/jsonWorker": "https://pxt.azureedge.net/blob/cf418d614a749960a65f0315e723d3dc36765940/vs/language/json/jsonWorker.js",
+            "vs/language/typescript/tsMode": "https://pxt.azureedge.net/blob/1b9d76bcb69132f9f706a868da89b8220c2804fa/vs/language/typescript/tsMode.js",
+            "vs/language/typescript/tsWorker": "https://pxt.azureedge.net/blob/39169161eed3b06ce4a6aab9a3fc0d93b678a558/vs/language/typescript/tsWorker.js",
+            "lzma/lzma_worker-min.js": "https://pxt.azureedge.net/blob/d08e97ec4175dc71d21c6058a0d800eeeb1a8a0f/lzma/lzma_worker-min.js",
+            "smoothie/smoothie_compressed.js": "https://pxt.azureedge.net/blob/1d99c2ee5b93a196114b16ef01bcf4be000c7ede/smoothie/smoothie_compressed.js",
+            "pxtblockly.js": "https://pxt.azureedge.net/blob/6209769a90bc16ca1110d01fb4d3841a0673b423/pxtblockly.js",
+            "blockly.css": "https://pxt.azureedge.net/blob/9cf6ff2f5e61137da9c6736b5bfc2d742c6cf68e/blockly.css",
+            "rtlblockly.css": "https://pxt.azureedge.net/blob/23fc4fff5283e5724d915fa798217b645f805223/rtlblockly.css",
+            "gifjs/gif.js": "https://pxt.azureedge.net/blob/15eaf38ac1eee2b2e4810a1ac13e8dbee035e546/gifjs/gif.js",
+            "qrcode/qrcode.min.js": "https://pxt.azureedge.net/blob/b258d18871877debfef7348f75c2e52b954c053c/qrcode/qrcode.min.js",
+            "zip.js/zip.min.js": "https://pxt.azureedge.net/blob/f01355117e534954c6d268457d9a73f11ebe3330/zip.js/zip.min.js",
+            "pdf-lib/pdf-lib.min.js": "https://pxt.azureedge.net/blob/8eb336e6678d79fbc5d48c7808a7c4fcddda765a/pdf-lib/pdf-lib.min.js",
+            "music-editor/apple.png": "https://pxt.azureedge.net/blob/73ef19074a264a2cfda67153087c296fa85b250b/music-editor/apple.png",
+            "music-editor/burger.png": "https://pxt.azureedge.net/blob/b3d5ffa224f3de1e45b4d578abe96ef79f50e703/music-editor/burger.png",
+            "music-editor/cake.png": "https://pxt.azureedge.net/blob/bbd922f5a142b7ccccd30e79711d4572a925abdd/music-editor/cake.png",
+            "music-editor/car.png": "https://pxt.azureedge.net/blob/95426c52fcdf1cc5aa347c2271b6f7e15127add2/music-editor/car.png",
+            "music-editor/cat.png": "https://pxt.azureedge.net/blob/4e82fb734dee2198aa547eda83f028e60dc6d964/music-editor/cat.png",
+            "music-editor/cherry.png": "https://pxt.azureedge.net/blob/a59b245ee3961f3000433beac007e642f338897d/music-editor/cherry.png",
+            "music-editor/clam.png": "https://pxt.azureedge.net/blob/e3834306653cc61af90f3f4fb2f437ade9cae13c/music-editor/clam.png",
+            "music-editor/computer.png": "https://pxt.azureedge.net/blob/b290f4d481d3ad0b9d92c98dc4690c859a3f4781/music-editor/computer.png",
+            "music-editor/crab.png": "https://pxt.azureedge.net/blob/bdb629f6b2748b1f8d791396c42bc09a900f1e2e/music-editor/crab.png",
+            "music-editor/dog.png": "https://pxt.azureedge.net/blob/ed6a1811687fcbb8178e2132dc6d4ba7de1479b1/music-editor/dog.png",
+            "music-editor/duck.png": "https://pxt.azureedge.net/blob/34c4c3b7338dfaae78da70617d9b47a24d228efe/music-editor/duck.png",
+            "music-editor/egg.png": "https://pxt.azureedge.net/blob/f5fa4fb409effcfd952dc4a19e507e1b6077f9d6/music-editor/egg.png",
+            "music-editor/explosion.png": "https://pxt.azureedge.net/blob/5dea8273ce0ca702e6b18881c1a2c79d51dc13f5/music-editor/explosion.png",
+            "music-editor/fish.png": "https://pxt.azureedge.net/blob/b72c72622569457905d64cbc2807b83dd6aececa/music-editor/fish.png",
+            "music-editor/ice-cream.png": "https://pxt.azureedge.net/blob/6c0d7afe8c5ea6e048b05fe4d001960b32ca7492/music-editor/ice-cream.png",
+            "music-editor/lemon.png": "https://pxt.azureedge.net/blob/666ae7d337e9caaeaee4cab8e9774d9ed1c8a077/music-editor/lemon.png",
+            "music-editor/snake.png": "https://pxt.azureedge.net/blob/27a03db4570069e4bb7e80226abaa97c3ba1659f/music-editor/snake.png",
+            "music-editor/star.png": "https://pxt.azureedge.net/blob/de5695dfbb9d94a68770023c7d16a172a3760405/music-editor/star.png",
+            "music-editor/strawberry.png": "https://pxt.azureedge.net/blob/e23907601862f30291b2f7702bdb4a430711f841/music-editor/strawberry.png",
+            "music-editor/taco.png": "https://pxt.azureedge.net/blob/4bf3b89c751020043a1d199d65cf9d640359dd1d/music-editor/taco.png",
+            "music-editor/bass-clef.svg": "https://pxt.azureedge.net/blob/6e5dab7887eeacdd81b16a9d0762db1d0a6172ff/music-editor/bass-clef.svg",
+            "music-editor/treble-clef.svg": "https://pxt.azureedge.net/blob/3e0f47cf7d8c462f30e2e5d9422cf23cca731f86/music-editor/treble-clef.svg",
+        }
+    </script>
+
+
+
+<div class=""></div><div class=""></div><div class=""></div><div class=""></div><script type="text/javascript" src="./smile_files/editor.js.download" async=""></script><script type="text/javascript" src="./smile_files/pxtblockly.js.download" async=""></script><div class="blocklyWidgetDiv" style="direction: ltr; display: none; height: 272px;"></div><div class="blocklyDropDownDiv" style="opacity: 0; transition: transform 0.25s ease 0s, opacity 0.25s ease 0s; transform: translate(0px, 0px);"><div class="blocklyDropDownContent"></div><div class="blocklyDropDownArrow"></div></div><div class="blocklyTooltipDiv"></div><script type="text/javascript" src="./smile_files/fieldeditors.js.download" async=""></script><canvas class="blocklyComputeCanvas"></canvas></body></html>
